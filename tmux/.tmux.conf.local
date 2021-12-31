@@ -385,9 +385,24 @@ tmux_conf_uninstall_plugins_on_reload=true
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
 #set -g @plugin 'tmux-plugins/tmux-cpu'
-#set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
+
+#tmux EDITOR variable setting
+setenv EDITOR "nvim"
+
+
+
+
+
+#window renaming stuff
+#set-option -g allow-rename off
+
+#New Window & Session bindings
+bind-key c command-prompt -p "window name:" "new-window; rename-window '%%'"
+
+bind S command-prompt -p "New Session:" "new-session -A -s '%%'"
 
 
 # -- custom variables ----------------------------------------------------------
@@ -409,10 +424,10 @@ tmux_conf_uninstall_plugins_on_reload=true
 #   curl -m 1 wttr.in?format=3 2>/dev/null
 #   sleep 900 # sleep for 15 minutes, throttle network requests whatever the value of status-interval
 # }
-#
-# online() {
 #   ping -c 1 1.1.1.1 >/dev/null 2>&1 && printf '✔' || printf '✘'
 # }
 #
 # "$@"
 # # /!\ do not remove the previous line
+
+

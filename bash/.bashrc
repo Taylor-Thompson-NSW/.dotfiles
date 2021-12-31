@@ -116,8 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-
+#Editor Variable
+export EDITOR="nvim"
 
 #Aliases for now
 alias chrome="/usr/bin/google-chrome"
