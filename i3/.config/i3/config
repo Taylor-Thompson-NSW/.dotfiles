@@ -176,6 +176,12 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+
+# Transparency adjustment keybinds
+bindsym Mod4+j exec --no-startup-id picom-trans -c -5
+bindsym Mod4+k exec --no-startup-id picom-trans -c +5
+
+
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
 
