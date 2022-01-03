@@ -2,7 +2,7 @@
 set $mod Mod1
 
 # Set display resolution
-exec_always --no-startup-id xrandr --output DP1-8 --mode 2560x1440 --rate 59.95
+exec_always --no-startup-id xrandr --output DP1-8 --mode 1920x1080 --rate 120
 
 font pango:Overpass Regular 8
 
@@ -138,7 +138,7 @@ hide_edge_borders vertical
 
 # Color variables
 set $unfocused_border #1D1F21
-set $focused_border #CC6666
+set $focused_border #303336
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #ffffff #ffffff #ffffff #ffffff   $focused_border
