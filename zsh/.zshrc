@@ -296,6 +296,8 @@ zstyle '*' single-ignored show
 ##################
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
+
 autoload -U compinit && compinit
 
 zstyle ':completion:*' menu select

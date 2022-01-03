@@ -4,7 +4,7 @@ set $mod Mod1
 # Set display resolution
 exec_always --no-startup-id xrandr --output DP1-8 --mode 1920x1080 --rate 120
 
-font pango:Overpass Regular 8
+font pango:Overpass Mono 14
 
 # Press mod key to be able to resize floating windows
 floating_modifier $mod
@@ -182,5 +182,5 @@ smart_gaps on
 # Only enable outer gaps when there is exactly one container
 smart_gaps inverse_outer
 
-gaps inner 10
+gaps inner 12
 gaps outer 0
