@@ -304,3 +304,7 @@ zstyle ':completion:*' menu select
 
 wal -R
 clear
+
+
+#Editor Variable
+export EDITOR="nvim"
