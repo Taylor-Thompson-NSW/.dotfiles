@@ -22,10 +22,10 @@ setopt ALL_EXPORT
 ### Set/unset  shell options
 ############################
 setopt   notify globdots correct pushdtohome cdablevars autolist
-setopt   correctall autocd recexact longlistjobs
+setopt   autocd recexact longlistjobs
 setopt   autoresume histignoredups pushdsilent
 setopt   autopushd pushdminus extendedglob rcquotes mailwarning
-unsetopt bgnice autoparamslash
+unsetopt bgnice autoparamslash correctall 
 
 ### Autoload zsh modules when they are referenced
 #################################################
@@ -308,3 +308,9 @@ clear
 
 #Editor Variable
 export EDITOR="nvim"
+
+export PATH=/home/tayl0rt/.local/share/gem/ruby/3.0.0/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
