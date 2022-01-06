@@ -311,6 +311,8 @@ export EDITOR="nvim"
 
 export PATH=/home/tayl0rt/.local/share/gem/ruby/3.0.0/bin:$PATH
 
+export PATH=$HOME/.local/bin:$PATH
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
