@@ -456,18 +456,24 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
-"----------------------------------------------------------------------------
-"----------------------------------------------------------------------------
+"--------------------------------
+"--------------------------------
 
-"             COLOR SCHEME & BACKGROUND TRANSPARENCY SETTING
+"COLOR SCHEME & BACKGROUND TRANSPARENCY SETTING
 colorscheme gruvbox
 highlight Normal ctermbg=none
-"----------------------------------------------------------------------------
+"--------------------------------
+"--------------------------------
 
-"----------------------------------------------------------------------------
-"           Reddit whitespace marking thing - uncomment to use
+"NEOFORMAT CONFIG STUFF
+let g:neoformat_try_node_exe = 1
+"--------------------------------
+"--------------------------------
+
+"Reddit whitespace marking thing - uncomment to use
 "match errorMsg /\s\+$/
-"----------------------------------------------------------------------------
+"--------------------------------
+"--------------------------------
 
 set nobomb
 set nocompatible            " disable compatibility to old-time vi

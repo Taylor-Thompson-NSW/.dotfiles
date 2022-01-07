@@ -309,9 +309,26 @@ clear
 #Editor Variable
 export EDITOR="nvim"
 
-export PATH=/home/tayl0rt/.local/share/gem/ruby/3.0.0/bin:$PATH
+#-----PATH ADDITIONS ------#
+#--------------------------#
+#RUBY
+export RUBY_PATH=/home/tayl0rt/.local/share/gem/ruby/3.0.0/bin
+#LOCAL BIN
+export LOCAL_BIN_PATH=$HOME/.local/bin
 
-export PATH=$HOME/.local/bin:$PATH
+#FINAL PATH EXPORT (MINUS NODE)
+export PATH=$RUBY_PATH:$LOCAL_BIN_PATH:$PATH
+
+#NODE MODULES - KEEP LAST and IT ADDS ITSELF
+_MY_NODE="$(which node)"
+if [ -e "${_MY_NODE}" ]; then
+	export NODE_PATH="$HOME/.npm-packages/bin:$HOME/.node_modules/bin"
+    export PATH=$PATH:$NODE_PATH
+fi
+unset _MY_NODE
+#--------------------------#
+#--------------------------#
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
