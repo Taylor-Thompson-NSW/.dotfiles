@@ -40,6 +40,9 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 "NeoFormat
 Plug 'sbdchd/neoformat'
+"vim-graphql
+Plug 'jparise/vim-graphql'
+
 call plug#end()
 
 "making nvim harder than it needs to be, lol
