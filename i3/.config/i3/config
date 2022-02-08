@@ -18,6 +18,9 @@ bindsym $mod+Return exec kitty
 #Close window
 bindsym $mod+Shift+q kill
 
+#Screenshot with Flameshot
+bindsym Shift+Mod4+s exec flameshot gui
+
 # Open dmenu 
 bindsym $mod+d exec dmenu_run -fn 'Overpass Mono:pixelsize=18' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
 
