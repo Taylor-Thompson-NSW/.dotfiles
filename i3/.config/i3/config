@@ -2,7 +2,7 @@
 set $mod Mod1
 
 # Set display resolution
-exec_always --no-startup-id xrandr --output DP1-8 --mode 1920x1080 --rate 60
+exec_always xrandr --output eDP-1 --auto --output HDMI-1 --auto --right-of eDP-1
 
 font pango:Overpass Mono 14
 
