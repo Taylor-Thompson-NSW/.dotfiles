@@ -171,5 +171,7 @@ xorg-xwininfo
 xorg-xwud
 xterm
 yay
+yt-dlp
+yt-dlp-drop-in
 zsh
 zsh-syntax-highlighting

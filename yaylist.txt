@@ -8,4 +8,4 @@ paman
 polybar-git
 supergfxctl
 yay
-ttf-hack
+yt-dlp-drop-in
