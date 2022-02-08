@@ -4,7 +4,7 @@ set $mod Mod1
 # Set display resolution
 exec_always xrandr --output eDP-1 --auto --output HDMI-1 --auto --right-of eDP-1
 
-font pango:Overpass Mono 14
+font pango:Overpass Mono 8
 
 # Press mod key to be able to resize floating windows
 floating_modifier $mod
@@ -16,7 +16,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Open dmenu 
-bindsym $mod+d exec dmenu_run -fn 'Overpass Mono:pixelsize=16' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
+bindsym $mod+d exec dmenu_run -fn 'Overpass Mono:pixelsize=18' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
 
 # Change focus
 bindsym $mod+j focus left

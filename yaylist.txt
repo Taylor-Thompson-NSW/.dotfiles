@@ -1,0 +1,11 @@
+ani-cli
+asusctl-git
+google-chrome
+mons
+nerd-fonts-complete
+optimus-manager
+paman
+polybar-git
+supergfxctl
+yay
+ttf-hack
