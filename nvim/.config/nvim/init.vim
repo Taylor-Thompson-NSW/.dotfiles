@@ -16,7 +16,16 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'onsails/lspkind-nvim'
+
+"-----------------------------------------------------
+"-----------------------------------------------------
+"SOMETIMES YOU HAVE TO MANUALLY INSTALL THE INSTALL.SH
+"For my systems sometimes it was located at:
+"$HOME/.local/share/nvim/plugged
 Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+"-----------------------------------------------------
+"-----------------------------------------------------
+
 
 "Harpoon by ThePrimeagen 
 Plug 'ThePrimeagen/harpoon'
