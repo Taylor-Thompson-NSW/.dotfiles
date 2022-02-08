@@ -2,12 +2,15 @@
 set $mod Mod1
 
 # Set display resolution
-exec_always xrandr --output eDP-1 --auto --output HDMI-1 --auto --right-of eDP-1
+exec_always xrandr --output eDP-1 --auto --output HDMI-1 --auto
 
-font pango:Overpass Mono 8
+font pango:Hack Regular 8
 
 # Press mod key to be able to resize floating windows
 floating_modifier $mod
+
+# keybinding to lock screen
+bindsym Control+Mod1+l exec "i3lock -c 000000"
 
 # Open new terminal
 bindsym $mod+Return exec kitty
