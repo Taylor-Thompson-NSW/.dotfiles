@@ -3,9 +3,9 @@ asusctl-git
 google-chrome
 mons
 nerd-fonts-complete
-optimus-manager
 paman
 polybar-git
 supergfxctl
 yay
 yt-dlp-drop-in
+zsh-z-git

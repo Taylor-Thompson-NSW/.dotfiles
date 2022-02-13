@@ -10,6 +10,7 @@ binutils
 bison
 blueman
 bluez
+bluez-hid2hci
 bluez-utils
 bottom
 btrfs-progs
@@ -28,6 +29,7 @@ feh
 file
 findutils
 firefox
+flameshot
 flex
 gawk
 gcc
@@ -50,6 +52,7 @@ i3status
 imagemagick
 imwheel
 inetutils
+iw
 jsoncpp
 kitty
 libreoffice-fresh
@@ -58,9 +61,11 @@ linux
 linux-firmware
 linux-headers
 linux-lts
+linux-zen
 lvm2
 lynx
 m4
+maim
 make
 man-pages
 mesa-utils
@@ -81,7 +86,6 @@ nvidia
 nvidia-prime
 nvidia-settings
 open-vm-tools
-optimus-manager
 os-prober
 otf-overpass
 pacman
@@ -109,6 +113,7 @@ strace
 sudo
 supergfxctl
 texinfo
+thunderbird
 tmux
 ttf-dejavu
 ttf-hack
@@ -175,3 +180,4 @@ yt-dlp
 yt-dlp-drop-in
 zsh
 zsh-syntax-highlighting
+zsh-z-git
