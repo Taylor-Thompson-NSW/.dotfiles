@@ -26,7 +26,6 @@ Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 "-----------------------------------------------------
 "-----------------------------------------------------
 
-
 "Harpoon by ThePrimeagen 
 Plug 'ThePrimeagen/harpoon'
 
