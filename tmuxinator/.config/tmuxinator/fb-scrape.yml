@@ -1,0 +1,12 @@
+# /Users/tayl0r/.config/tmuxinator/fb-scrape.yml
+
+name: fb-scrape
+root: ~/projects_and_resources/fb_ad_scrape
+
+# start session with this window open
+startup_window: nvim
+
+windows:
+  - nvim: nvim .
+  - zsh: clear
+  - candlescrape: nvim /home/tayl0r/projects_and_resources/scrapper_for_ads/brooklyncandleScrape.js

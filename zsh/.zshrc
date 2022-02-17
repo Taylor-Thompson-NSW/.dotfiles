@@ -312,7 +312,7 @@ export EDITOR="nvim"
 #-----PATH ADDITIONS ------#
 #--------------------------#
 #RUBY
-export RUBY_PATH=/home/tayl0rt/.local/share/gem/ruby/3.0.0/bin
+export RUBY_PATH=/home/tayl0r/.local/share/gem/ruby/3.0.0/bin
 #LOCAL BIN
 export LOCAL_BIN_PATH=$HOME/.local/bin
 
