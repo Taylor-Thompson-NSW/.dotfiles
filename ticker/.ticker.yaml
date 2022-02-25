@@ -1,0 +1,37 @@
+# ~/.ticker.yaml
+show-summary: true
+show-tags: true
+show-fundamentals: true
+show-separator: true
+show-holdings: true
+interval: 5
+currency: USD
+currency-summary-only: false
+watchlist:
+  - SPY
+  - VTI
+  - BTC-USD
+  - ETH-USD
+  - AAPL
+  - MSFT
+lots:
+  - symbol: "SPY"
+    quantity: 35.0
+    unit_cost: 146.00
+      # EXAMPLES
+      # - symbol: "ARKW"
+      #   quantity: 20.0
+      #   unit_cost: 152.25
+      # - symbol: "ARKW"
+      #   quantity: 20.0
+      #   unit_cost: 145.35
+      #   fixed_cost: 7.00 # e.g. brokerage commission fee
+groups:
+  - name: crypto
+    watchlist:
+      - SHIB-USD
+      - VGX-USD
+    holdings:
+      - symbol: SOL1-USD
+        quantity: 17
+        unit_cost: 159.10
