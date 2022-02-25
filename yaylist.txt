@@ -6,6 +6,7 @@ nerd-fonts-complete
 paman
 polybar-git
 supergfxctl
+ticker
 yay
 yt-dlp-drop-in
 zsh-z-git

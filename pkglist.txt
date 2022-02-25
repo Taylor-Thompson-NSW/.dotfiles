@@ -85,6 +85,7 @@ ntfs-3g
 nvidia
 nvidia-prime
 nvidia-settings
+onefetch
 open-vm-tools
 os-prober
 otf-overpass
@@ -114,6 +115,8 @@ sudo
 supergfxctl
 texinfo
 thunderbird
+ticker
+tickrs
 tmux
 ttf-dejavu
 ttf-hack
