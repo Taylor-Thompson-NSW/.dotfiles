@@ -491,6 +491,9 @@ let g:neoformat_try_node_exe = 1
 "--------------------------------
 "--------------------------------
 
+let g:neoformat_enabled_python = ['yapf']
+
+
 "Reddit whitespace marking thing - uncomment to use
 "match errorMsg /\s\+$/
 "--------------------------------
