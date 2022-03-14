@@ -347,3 +347,5 @@ export NVM_DIR="$HOME/.nvm"
 #
 #Feh alias to open with filename & fit to window
 alias feh="feh -d -."
+#Auto make parent dirs
+alias mkdir='mkdir -pv'
