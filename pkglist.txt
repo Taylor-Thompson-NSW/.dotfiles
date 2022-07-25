@@ -16,10 +16,13 @@ bottom
 btrfs-progs
 chromium
 cpupower
+darktable
 dhcpcd
 dialog
 discord
 dmenu
+docker
+docker-compose
 dosfstools
 efibootmgr
 elementary-icon-theme
@@ -69,6 +72,8 @@ maim
 make
 man-pages
 mesa-utils
+mongodb-bin
+mongodb-tools-bin
 mons
 mtools
 nano
@@ -90,6 +95,7 @@ open-vm-tools
 os-prober
 otf-overpass
 pacman
+pacman-contrib
 paman
 pantheon-music
 patch
@@ -109,6 +115,7 @@ ruby
 rxvt-unicode
 sed
 shutter
+slack-desktop
 stow
 strace
 sudo

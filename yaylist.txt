@@ -1,10 +1,13 @@
 ani-cli
 asusctl-git
 google-chrome
+mongodb-bin
+mongodb-tools-bin
 mons
 nerd-fonts-complete
 paman
 polybar-git
+slack-desktop
 supergfxctl
 ticker
 yay
