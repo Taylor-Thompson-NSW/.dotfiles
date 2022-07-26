@@ -430,4 +430,4 @@ bind S command-prompt -p "New Session:" "new-session -A -s '%%'"
 # "$@"
 # # /!\ do not remove the previous line
 
-
+set-option -g default-shell /bin/zsh
