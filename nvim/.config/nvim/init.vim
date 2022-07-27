@@ -34,7 +34,6 @@ Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-startify'
-Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Treesitter -----------------
@@ -51,7 +50,23 @@ Plug 'sbdchd/neoformat'
 "vim-graphql
 Plug 'jparise/vim-graphql'
 
+"COLOR SCHEMES
+Plug 'morhetz/gruvbox'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
 call plug#end()
+
+"--------------------------------
+"--------------------------------
+"TOKYONIGHT CONFIG
+let g:tokyonight_transparent = 1
+"COLOR SCHEME & BACKGROUND TRANSPARENCY SETTING
+"colorscheme gruvbox
+colorscheme tokyonight
+"--------------------------------
+highlight Normal ctermbg=none
+"--------------------------------
+"--------------------------------
 
 "making nvim harder than it needs to be, lol
 for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -477,14 +492,6 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
-"--------------------------------
-"--------------------------------
-
-"COLOR SCHEME & BACKGROUND TRANSPARENCY SETTING
-colorscheme gruvbox
-highlight Normal ctermbg=none
-"--------------------------------
-"--------------------------------
 
 "NEOFORMAT CONFIG STUFF
 let g:neoformat_try_node_exe = 1
