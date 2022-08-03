@@ -51,20 +51,39 @@ Plug 'sbdchd/neoformat'
 Plug 'jparise/vim-graphql'
 
 "COLOR SCHEMES
-Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()
 
+
+
 "--------------------------------
 "--------------------------------
-"TOKYONIGHT CONFIG
+"COLOR SCHEMES
+"--------------------------------
+"--------------------------------
+"Gruvbox Material config
+if has('termguicolors')
+  set termguicolors
+endif
+
+let g:gruvbox_material_enable_bold=1
+let g:gruvbox_material_better_performance = 1
+let g:gruvbox_material_foreground='mix'
+"--------------------------------
+"BACKGROUND TRANSPARENCY SETTING
+"--------------------------------
+let g:gruvbox_material_transparent_background=1
 let g:tokyonight_transparent = 1
-"COLOR SCHEME & BACKGROUND TRANSPARENCY SETTING
-"colorscheme gruvbox
-colorscheme tokyonight
+"--------------------------------
+"SET THE COLOR SCHEME
+"--------------------------------
+colorscheme gruvbox-material
+"colorscheme tokyonight
 "--------------------------------
 highlight Normal ctermbg=none
+"autocmd VimEnter * hi Normal ctermbg=none
 "--------------------------------
 "--------------------------------
 
