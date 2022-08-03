@@ -349,3 +349,5 @@ export NVM_DIR="$HOME/.nvm"
 alias feh="feh -d -."
 #Auto make parent dirs
 alias mkdir='mkdir -pv'
+#Making changing directories to backlight files a little faster
+alias changebrightness='cd /sys/class/backlight/'
