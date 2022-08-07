@@ -101,6 +101,8 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+bindsym $mod+Shift+Ctrl+m move workspace to output next
+
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -141,20 +143,20 @@ bar {
         mode invisible
 }
 
-new_window pixel 2
+default_border pixel 2
 
-hide_edge_borders vertical
+hide_edge_borders none
 
 # Color variables
 set $unfocused_border #1D1F21
-set $focused_border #303336
+set $focused_border #555658
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.unfocused        #ffffff #ffffff #ffffff #ffffff   $unfocused_border
-client.urgent           #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.placeholder      #ffffff #ffffff #ffffff #ffffff   #ffffff
+client.focused          #ffffff #ffffff #ffffff $focused_border   $focused_border
+client.focused_inactive #ffffff #ffffff #ffffff $focused_border  $focused_border
+client.unfocused        #ffffff #ffffff #ffffff $unfocused_border   $unfocused_border
+client.urgent           #ffffff #ffffff #ffffff $focused_border   $focused_border
+client.placeholder      #ffffff #ffffff #ffffff $focused_border   $focused_border
 
 client.background       #ffffff
 
