@@ -176,6 +176,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Execute Picom on launch
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
+#exec autotiling script from https://github.com/nwg-piotr/autotiling
+exec_always --no-startup-id autotiling
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
@@ -201,3 +204,6 @@ smart_gaps inverse_outer
 
 gaps inner 12
 gaps outer 0
+
+
+
