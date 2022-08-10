@@ -79,8 +79,8 @@ let g:tokyonight_transparent = 1
 "--------------------------------
 "SET THE COLOR SCHEME
 "--------------------------------
-colorscheme gruvbox-material
-"colorscheme tokyonight
+"colorscheme gruvbox-material
+colorscheme tokyonight
 "--------------------------------
 highlight Normal ctermbg=none
 "autocmd VimEnter * hi Normal ctermbg=none
@@ -177,6 +177,18 @@ map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
 nnoremap <Leader><space> :noh<cr>
 
+
+"remaps for tabs
+" Tab navigation like Firefox.
+nnoremap <C-l> gt<CR>
+nnoremap <C-h> gT<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-l> gt<CR>
+nnoremap <C-h> gT<CR>
+nnoremap <C-t> :tabnew<CR>
+
+"-----------------------------------
+"-----------------------------------
 "$MYVIMRC remaps
 "----------------------------------
 "Opens init.vim
