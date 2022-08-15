@@ -206,4 +206,5 @@ gaps inner 12
 gaps outer 0
 
 
-
+bindcode 115 exec amixer sset 'Master' 15%
+#bindcode 114 exec --no-startup-id amixer sset 'Master' 15%

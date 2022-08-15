@@ -7,6 +7,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
+"Code Comment plugins
+Plug 'tpope/vim-commentary'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+
 " Close tags
 Plug 'alvan/vim-closetag'
 
@@ -28,11 +32,12 @@ Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 "Harpoon by ThePrimeagen 
 Plug 'ThePrimeagen/harpoon'
+Plug 'ThePrimeagen/vim-be-good'
 
 " Plug 'github/copilot.vim'
 Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
+"Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -55,7 +60,6 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()
-
 
 
 "--------------------------------
@@ -461,7 +465,6 @@ let g:closetag_close_shortcut = '<leader><leader>>'
 "-------------------------------------
 "-------------------------------------
 
-
 "-------------------------------------
 "treesitter crap
 "-------------------------------------
@@ -480,8 +483,36 @@ require('nvim-treesitter.configs').setup {
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
+    context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+
+    config = {
+      typescript = { 
+        __default = '// %s',
+        __multiline = '// %s',
+        jsx_element = '{/* %s */}',
+        jsx_fragment = '{/* %s */}',
+        jsx_attribute = '// %s',
+        comment = '// %s',
+        __parent = {
+          jsx_expression = '// %s',
+          },
+        },
+      javascript = {
+        __default = '// %s',
+        __multiline = '// %s',
+        jsx_element = '{/* %s */}',
+        jsx_fragment = '{/* %s */}',
+        jsx_attribute = '// %s',
+        comment = '// %s',
+        __parent = {
+          jsx_expression = '// %s',
+          },
+        }
+      }
   
-}
+}}
 EOF
 "-------------------------------------
 "----------Telescope Stuff------------
@@ -541,7 +572,6 @@ let g:neoformat_enabled_python = ['yapf']
 "match errorMsg /\s\+$/
 "--------------------------------
 "--------------------------------
-
 set nobomb
 set nocompatible            " disable compatibility to old-time vi
 set scrolloff=7             " 7 lines for scrolling
