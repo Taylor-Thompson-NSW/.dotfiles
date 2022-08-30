@@ -1,0 +1,3 @@
+wget -O /dev/null --post-data="mac=xx:xx:xx:xx:xx:xx&apname=xx:xx:xx:xx:xx:xx" http://sbux-portal.appspot.com/static/page2_nosdn.html
+
+captive-browser
