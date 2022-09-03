@@ -328,6 +328,9 @@ export LOCAL_BIN_PATH=$HOME/.local/bin
 #FINAL PATH EXPORT (MINUS NODE)
 export PATH=$RUBY_PATH:$LOCAL_BIN_PATH:$PATH
 
+#RUST PATH EXPORT
+export PATH="$HOME/.cargo/bin:$PATH"
+
 #NODE MODULES - KEEP LAST and IT ADDS ITSELF
 _MY_NODE="$(which node)"
 if [ -e "${_MY_NODE}" ]; then
