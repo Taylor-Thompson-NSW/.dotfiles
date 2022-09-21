@@ -1,5 +1,7 @@
-ani-cli
+ani-cli-git
 asusctl-git
+autotiling-git
+captive-browser-git
 google-chrome
 mongodb-bin
 mongodb-tools-bin
@@ -8,7 +10,6 @@ nerd-fonts-complete
 paman
 polybar-git
 slack-desktop
-supergfxctl
 ticker
 yay
 yt-dlp-drop-in
