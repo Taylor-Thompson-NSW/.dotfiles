@@ -84,7 +84,7 @@ let g:tokyonight_transparent = 1
 "--------------------------------
 "SET THE COLOR SCHEME
 "--------------------------------
-"colorscheme gruvbox-material
+" colorscheme gruvbox-material
 colorscheme tokyonight
 "--------------------------------
 highlight Normal ctermbg=none
