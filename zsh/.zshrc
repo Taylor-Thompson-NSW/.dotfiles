@@ -180,7 +180,7 @@ mcd () {
 alias cls="clear"
 alias ..="cd .."
 alias cd..="cd .."
-alias ll="ls -lisa --color=auto"
+alias ll="ls -lsah --color=auto"
 alias home="cd ~"
 alias df="df -ahiT --total"
 alias mkdir="mkdir -pv"
