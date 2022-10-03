@@ -84,8 +84,8 @@ let g:tokyonight_transparent = 1
 "--------------------------------
 "SET THE COLOR SCHEME
 "--------------------------------
-" colorscheme gruvbox-material
-colorscheme tokyonight
+colorscheme gruvbox-material
+" colorscheme tokyonight
 "--------------------------------
 highlight Normal ctermbg=none
 "autocmd VimEnter * hi Normal ctermbg=none
