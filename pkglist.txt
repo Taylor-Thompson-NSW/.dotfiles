@@ -35,9 +35,11 @@ findutils
 firefox
 flameshot
 flex
+fzf
 gawk
 gcc
 gettext
+gifski
 gimp
 git
 google-chrome
@@ -110,6 +112,7 @@ paman
 pantheon-music
 patch
 pavucontrol
+peek
 picom
 pipewire
 pipewire-pulse
@@ -160,6 +163,7 @@ xorg-server
 xorg-xev
 xorg-xinit
 xorg-xinput
+xorg-xwininfo
 xterm
 yay
 yt-dlp

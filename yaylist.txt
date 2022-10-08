@@ -9,6 +9,7 @@ mons
 nerd-fonts-complete
 paman
 polybar-git
+python2
 slack-desktop
 ticker
 yay
