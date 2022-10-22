@@ -60,6 +60,10 @@ Plug 'jparise/vim-graphql'
 Plug 'sainnhe/gruvbox-material'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
+"---------------------------
+"Jupyter & Neovim plugin - Search specifically for: Magma
+Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
+
 call plug#end()
 
 
@@ -100,6 +104,8 @@ for key in ['<Up>', '<Down>', '<Left>', '<Right>']
 endfor
 
 set clipboard+=unnamedplus
+
+
 
 " Uncomment if on WSL!!
 "let g:clipboard = {
@@ -166,15 +172,6 @@ nnoremap <nowait><Leader><space>h :lua require("harpoon.ui").nav_next()<cr>
 vnoremap <leader>p "_dP
 
 
-"-----------------------------------
-"-----------------------------------
-"remaps for switching windows/saving/buffer delete/etc
-"-----------------------------------
-"-----------------------------------
-nnoremap <leader><space>q :q<cr>
-nnoremap <leader><space>w :w<cr>
-nnoremap <leader><space>wq :wq<cr>
-nnoremap <leader><space>ee :bd<cr>
 
 map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
@@ -236,6 +233,19 @@ inoremap } }<c-g>u
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+"Jupyter Magma Bindings
+nnoremap <silent><expr> <Leader>r  :MagmaEvaluateOperator<CR>
+nnoremap <silent>       <Leader>rr :MagmaEvaluateLine<CR>
+xnoremap <silent>       <Leader>r  :<C-u>MagmaEvaluateVisual<CR>
+nnoremap <silent>       <Leader>rc :MagmaReevaluateCell<CR>
+nnoremap <silent>       <Leader>rd :MagmaDelete<CR>
+nnoremap <silent>       <Leader>ro :MagmaShowOutput<CR>
+nnoremap <silent>       <Leader>eo :noautocmd MagmaEnterOutput<CR>
+
+let g:magma_automatically_open_output = v:false
+let g:magma_wrap_output = v:false
+let g:magma_image_provider = "ueberzug"
+
 "----------------------------------
 "----------------------------------
 "----------------------------------
@@ -249,12 +259,12 @@ set statusline=%f\ \ %y%m%r%h%w%=[%l,%v]\ \ \ \ \ \ [%L,%p%%]\ %n
 
 	if has('nvim-0.4.0') || has('patch-8.2.0750')
 	  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-	  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+	  nnoremap <silent><nowait><expr> <C-g> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-g>"
 	  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-	  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+	  inoremap <silent><nowait><expr> <C-g> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 	  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-	  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-	endif
+	  vnoremap <silent><nowait><expr> <C-g> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-g>"
+  endif
 
 "-------------------------------------
 "-------------------------------------
@@ -350,13 +360,14 @@ augroup mygroup
 augroup end
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" BEING WEIRD
+xmap <leader><leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader><leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader><leader>ac  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader><leader>qf  <Plug>(coc-fix-current)
 
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
@@ -607,4 +618,6 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
+
+
 

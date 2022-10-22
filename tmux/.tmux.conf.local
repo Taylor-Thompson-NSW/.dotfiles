@@ -393,7 +393,10 @@ set -g @continuum-restore 'on'
 setenv EDITOR "nvim"
 
 
-
+# disable sound bell
+set -g bell-action none
+# disable visual bell
+set -g visual-bell off
 
 
 #window renaming stuff
