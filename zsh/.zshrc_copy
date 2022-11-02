@@ -175,21 +175,6 @@ mcd () {
     cd $1
 }
 
-
-#########################
-## oh-my-zsh STUFF
-ZSH=/usr/share/oh-my-zsh/
-
-#ZSH PLUGINS
-plugins=(git)
-
-ZSH_THEME="robbyrussell"
-# ZSH_THEME="simple"
-
-source $ZSH/oh-my-zsh.sh
-#########################
-#########################
-
 ### Set alias
 #############
 alias cls="clear"
@@ -314,10 +299,13 @@ zstyle '*' single-ignored show
 
 ### Source plugins
 ##################
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
+
+#ZSH PLUGINS
+plugins=(git)
+
 
 autoload -U compinit && compinit
 
@@ -338,8 +326,6 @@ clear
 
 #Editor Variable
 export EDITOR="nvim"
-
-
 
 #-----PATH ADDITIONS ------#
 #--------------------------#
@@ -377,6 +363,5 @@ alias feh="feh -d -."
 alias mkdir='mkdir -pv'
 #Making changing directories to backlight files a little faster
 alias changebrightness='cd /sys/class/backlight/'
-
 
 

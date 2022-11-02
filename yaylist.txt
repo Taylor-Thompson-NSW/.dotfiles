@@ -3,6 +3,7 @@ asusctl-git
 autotiling-git
 captive-browser-git
 google-chrome
+lf-bin
 mongodb-bin
 mongodb-tools-bin
 mons
@@ -10,6 +11,7 @@ nerd-fonts-complete
 paman
 polybar-git
 python2
+python38
 slack-desktop
 ticker
 yay

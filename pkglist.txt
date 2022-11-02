@@ -18,6 +18,7 @@ captive-browser-git
 chromium
 colord
 cpupower
+dconf-editor
 dhcpcd
 dialog
 discord
@@ -29,6 +30,7 @@ efibootmgr
 elementary-icon-theme
 expac
 fakeroot
+fd
 feh
 file
 findutils
@@ -64,6 +66,7 @@ iw
 iwd
 jsoncpp
 kitty
+lf-bin
 libreoffice-fresh
 libtool
 libva-intel-driver
@@ -124,7 +127,9 @@ pulsemixer
 python-pip
 python-pywal
 python2
+python38
 ranger
+ripgrep
 ruby
 rxvt-unicode
 sed
