@@ -217,6 +217,10 @@ bindkey "^[[B" history-beginning-search-forward-end
 bindkey "^r" history-incremental-search-backward
 bindkey ' ' magic-space    # also do history expansion on space
 bindkey '^I' complete-word # complete on tab, leave expansion to _expand
+
+# Where should I put you? # :) Thanks ThePrimeagen!
+bindkey -s '^f' "tmux-sessionizer\n"
+#
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
 
