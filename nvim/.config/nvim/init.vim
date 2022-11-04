@@ -35,8 +35,6 @@ Plug 'ThePrimeagen/vim-be-good'
 
 " Plug 'github/copilot.vim'
 Plug 'nvim-lua/lsp_extensions.nvim'
-Plug 'preservim/nerdtree'
-"Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -125,6 +123,8 @@ set clipboard+=unnamedplus
 let mapleader= " "
 
 inoremap jk <esc>
+
+nnoremap <leader>nt :Ex<CR>
 
 "Remaps for Harpoon-----------------
 "-----------------------------------
@@ -538,24 +538,6 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 "----------------------------------------------------------------------------
 "----------------------------------------------------------------------------
-" nerdtree stuff
-nnoremap <leader>nn :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <leader>nt :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
-
-let g:NERDTreeIgnore = ['^node_modules$']
-
-" Start NERDTree and put the cursor back in the other window.
-" autocmd VimEnter * NERDTree | wincmd p
-
-" Close the tab if NERDTree is the only window remaining in it.
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
-
 
 "NEOFORMAT CONFIG STUFF
 let g:neoformat_try_node_exe = 1
