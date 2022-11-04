@@ -234,6 +234,7 @@ bindkey '^I' complete-word # complete on tab, leave expansion to _expand
 
 # Where should I put you? # :) Thanks ThePrimeagen!
 bindkey -s '^f' "tmux-sessionizer\n"
+bindkey -s '^v' "fuzzypwd\n"
 #
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
@@ -377,6 +378,8 @@ alias feh="feh -d -."
 alias mkdir='mkdir -pv'
 #Making changing directories to backlight files a little faster
 alias changebrightness='cd /sys/class/backlight/'
+
+alias fuzzypwd='cd $(find * -type d | fzf)'
 
 
 

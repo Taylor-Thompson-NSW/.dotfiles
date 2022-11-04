@@ -144,22 +144,9 @@ nnoremap <nowait><Leader><space>k :lua require("harpoon.ui").nav_file(2)<CR>
 nnoremap <nowait><Leader><space>l :lua require("harpoon.ui").nav_file(3)<CR>
 nnoremap <nowait><Leader><space>; :lua require("harpoon.ui").nav_file(4)<CR>
 
-"MY ORIGINAL DEFAULTS
-"
-"map <leader>mm :lua require("harpoon.mark").add_file()<cr>
-"map <leader>ml :lua require("harpoon.ui").toggle_quick_menu()<cr>
-"
 ""navigates to next mark
 nnoremap <nowait><Leader><space>h :lua require("harpoon.ui").nav_next()<cr>  
 "
-""navigates to previous mark
-"map <leader>md :lua require("harpoon.ui").nav_prev()<cr>  
-"
-""navigates to file specifically
-"map <leader>11 :lua require("harpoon.ui").nav_file(1)<cr>
-"map <leader>22 :lua require("harpoon.ui").nav_file(2)<cr>
-"map <leader>33 :lua require("harpoon.ui").nav_file(3)<cr>
-"map <leader>44 :lua require("harpoon.ui").nav_file(4)<cr>
 
 "-----------------------------------
 "-----------------------------------
