@@ -157,6 +157,9 @@ nnoremap <nowait><Leader><space>h :lua require("harpoon.ui").nav_next()<cr>
 "Remap for pasting
 vnoremap <leader>p "_dP
 
+"Keeps cursor centered while jumping with ctrl d/u
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
 
 map <leader>h :wincmd h<CR>
