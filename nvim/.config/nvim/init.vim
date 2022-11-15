@@ -81,12 +81,21 @@ let g:gruvbox_material_foreground='mix'
 "BACKGROUND TRANSPARENCY SETTING
 "--------------------------------
 let g:gruvbox_material_transparent_background=1
-let g:tokyonight_transparent = 1
 "--------------------------------
 "SET THE COLOR SCHEME
 "--------------------------------
-colorscheme gruvbox-material
-" colorscheme tokyonight
+"
+lua <<EOF
+require("tokyonight").setup({
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+  transparent = true, -- Enable this to disable setting the background color
+})
+EOF
+
+" colorscheme gruvbox-material
+colorscheme tokyonight-night
 "--------------------------------
 highlight Normal ctermbg=none
 "autocmd VimEnter * hi Normal ctermbg=none
