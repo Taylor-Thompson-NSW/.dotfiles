@@ -13,6 +13,9 @@ vim.opt.relativenumber=true
 vim.opt.wildoptions:append('pum')
 vim.opt.wildmode = {'list', 'longest'}
 vim.opt.colorcolumn = "80"
+--statusline from reddit that I like
+vim.opt.statusline="%f %y%m%r%h%w%=[%l,%v] [%L,%p%%] %n"
+
 --
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.

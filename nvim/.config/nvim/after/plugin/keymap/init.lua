@@ -6,6 +6,9 @@ local xnoremap = Remap.xnoremap
 local nmap = Remap.nmap
 
 
+nmap( "<leader>vm", ":vsp $MYVIMRC<CR>", {nowait = true})
+nmap( "<leader>sv", ":source $MYVIMRC<CR>", {nowait = true})
+
 inoremap("jk", "<esc>")
 nnoremap("<leader>nt", ":Ex<CR>", {silent=true})
 --tmux sessionizer
@@ -52,6 +55,10 @@ nnoremap("<C-t>", ":tabnew<CR>")
 nnoremap("<C-l>", "gt<CR>")
 nnoremap("<C-h>", "gT<CR>")
 nnoremap("<C-t>", ":tabnew<CR>")
+nnoremap("<leader>h", ":wincmd h<CR>")
+nnoremap("<leader>j", ":wincmd j<CR>")
+nnoremap("<leader>k", ":wincmd k<CR>")
+nnoremap("<leader>l", ":wincmd l<CR>")
 
 --Jupyter Magma Keybindings
 

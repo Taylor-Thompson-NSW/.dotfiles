@@ -4,7 +4,7 @@ return require("packer").startup(function(use)
   use("ryanoasis/vim-devicons")
 
   --Snippets
-  use("L3MON4D3/LuaSnip")
+  use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
   use("rafamadriz/friendly-snippets")
 
   --Code Comment plugins
@@ -16,10 +16,17 @@ return require("packer").startup(function(use)
 
   -- Plebvim lsp Plugins - from ThePrimeagen mostly
   use("neovim/nvim-lspconfig")
+  use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
-  use("hrsh7th/nvim-cmp")
   use("onsails/lspkind-nvim")
+  use("L3MON4D3/LuaSnip")
+  use("saadparwaiz1/cmp_luasnip")
+  use("nvim-lua/lsp_extensions.nvim")
+  use("glepnir/lspsaga.nvim")
+  use("simrat39/symbols-outline.nvim")
+
+  use("mhinz/vim-startify")
 
   -------------------------------------------------------
   --SOMETIMES YOU HAVE TO MANUALLY INSTALL THE INSTALL.SH
@@ -33,13 +40,9 @@ return require("packer").startup(function(use)
   use("ThePrimeagen/harpoon")
   use("ThePrimeagen/vim-be-good")
 
-  -- use("github/copilot.vim")
-  use("nvim-lua/lsp_extensions.nvim")
-  use("mhinz/vim-startify")
-  use("neoclide/coc.nvim", { branch= "release"})
 
   --Treesitter -----------------
-  use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate"})  -- We recommend updating the parsers on update
+  use {"nvim-treesitter/nvim-treesitter",  run = ":TSUpdate"}
   use("nvim-treesitter/nvim-treesitter-context")
   --use("p00f/nvim-ts-rainbow")
   ------------------------------
@@ -55,11 +58,11 @@ return require("packer").startup(function(use)
 
   --COLOR SCHEMES
   use("sainnhe/gruvbox-material")
-  use("folke/tokyonight.nvim", { branch = "main" })
+  use{"folke/tokyonight.nvim", branch = "main" }
 
   -----------------------------
   --Jupyter & Neovim plugin - Search specifically for: Magma
-  use("dccsillag/magma-nvim", { run =  ":UpdateRemotePlugins" })
+  use{"dccsillag/magma-nvim",  run =  ":UpdateRemotePlugins" }
   end
 )
 
