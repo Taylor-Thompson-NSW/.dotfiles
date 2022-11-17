@@ -2,6 +2,7 @@ return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
 
   use("ryanoasis/vim-devicons")
+  use("mhinz/vim-startify")
 
   --Snippets
   use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
@@ -20,13 +21,17 @@ return require("packer").startup(function(use)
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
   use("onsails/lspkind-nvim")
-  use("L3MON4D3/LuaSnip")
   use("saadparwaiz1/cmp_luasnip")
   use("nvim-lua/lsp_extensions.nvim")
   use("glepnir/lspsaga.nvim")
   use("simrat39/symbols-outline.nvim")
 
-  use("mhinz/vim-startify")
+  --null-ls
+  use("jose-elias-alvarez/null-ls.nvim")
+
+  --MASON & MASON CFG
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
 
   -------------------------------------------------------
   --SOMETIMES YOU HAVE TO MANUALLY INSTALL THE INSTALL.SH

@@ -37,6 +37,11 @@ vnoremap("<leader>[", "<esc>`>a]<esc>`<i[<esc>")
 vnoremap("<leader>{", "<esc>`>a}<esc>`<i{<esc>")
 --
 
+-- format buffer
+nnoremap("<leader>for", function()
+    vim.lsp.buf.format()
+end)
+
 -- Undo breakpoints
 inoremap(",", ",<c-g>u")
 inoremap(".", ".<c-g>u")
@@ -61,11 +66,10 @@ nnoremap("<leader>k", ":wincmd k<CR>")
 nnoremap("<leader>l", ":wincmd l<CR>")
 
 --Jupyter Magma Keybindings
-
-nnoremap("<Leader>r", ":MagmaEvaluateOperator<CR>", {silent = true, expr = true})
-nnoremap("<Leader>rr", ":MagmaEvaluateLine<CR>", {silent = true})
-xnoremap("<Leader>r ", ":<C-u>MagmaEvaluateVisual<CR>", {silent = true})
-nnoremap("<Leader>rc", ":MagmaReevaluateCell<CR>", {silent = true})
-nnoremap("<Leader>rd", ":MagmaDelete<CR>", {silent = true})
-nnoremap("<Leader>ro", ":MagmaShowOutput<CR>", {silent = true})
-nnoremap("<Leader>eo", ":noautocmd MagmaEnterOutput<CR>", {silent = true})
+nnoremap("<Leader>r", "<cmd>MagmaEvaluateOperator<CR>", {expr=true, silent=true})
+nnoremap("<Leader>rr", "<cmd>MagmaEvaluateLine<CR>", {silent=true})
+xnoremap("<Leader>r", ":<C-u>MagmaEvaluateVisual<CR>", {silent=true, nowait=true})
+nnoremap("<Leader>rc", "<cmd>MagmaReevaluateCell<CR>", {silent=true})
+nnoremap("<Leader>rd", "<cmd>MagmaDelete<CR>", {silent=true})
+nnoremap("<Leader>ro", "<cmd>MagmaShowOutput<CR>", {silent=true})
+nnoremap("<Leader>eo", "<cmd>noautocmd MagmaEnterOutput<CR>", {silent=true})
