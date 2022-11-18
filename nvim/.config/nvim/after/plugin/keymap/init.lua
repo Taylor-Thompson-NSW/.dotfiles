@@ -9,6 +9,13 @@ local nmap = Remap.nmap
 nmap( "<leader>vm", ":vsp $MYVIMRC<CR>", {nowait = true})
 nmap( "<leader>sv", ":source $MYVIMRC<CR>", {nowait = true})
 
+-- resize current buffer by +/- 5
+-- simple way to resize when I have splits pretty much
+nnoremap("<leader><Left>", ":vertical resize -5<cr>")
+nnoremap("<leader><Down>", ":resize +5<cr>")
+nnoremap("<leader><Up>", ":resize -5<cr>")
+nnoremap("<leader><Right>", ":vertical resize +5<cr>")
+
 inoremap("jk", "<esc>")
 nnoremap("<leader>nt", ":Ex<CR>", {silent=true})
 --tmux sessionizer

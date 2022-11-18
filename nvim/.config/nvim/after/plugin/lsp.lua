@@ -74,19 +74,38 @@ tabnine:setup({
   snippet_placeholder = "..",
 })
 
+
+-- local diagnostic_hover = function()
+--   vim.api.nvim_create_augroup("diaghover", { clear = true })
+--   vim.api.nvim_create_autocmd("DiagHover", {
+--     group = "diaghover",
+--     command = "autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()",
+--   })
+--   vim.api.nvim_create_autocmd("DiagHoverSig", {
+--     group = "diaghover",
+--     command = "autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()",
+--   })
+-- end
+
 local function config(_config)
   return vim.tbl_deep_extend("force", {
     capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     on_attach = function()
+      vim.diagnostic.config({
+        float = {
+          source = 'always',
+          border = border
+        },
+      })
       nnoremap("gd", function() vim.lsp.buf.definition() end)
       nnoremap("gt", function() vim.lsp.buf.type_definition() end)
-      nnoremap("gi", function() vim.lsp.buf.implemenation() end)
-      nnoremap("K", function() vim.lsp.buf.hover() end)
+      nnoremap("gi", function() vim.lsp.buf.implementation() end)
+      nnoremap("<leader>K", function() vim.lsp.buf.hover() end)
       nnoremap("<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
-      nnoremap("<leader>vd", function() vim.diagnostic.open_float() end)
+      nnoremap("K", function() vim.diagnostic.open_float() end)
       nnoremap("<leader>dl", "<cmd>Telescope diagnostics<CR>")
-      nnoremap("[d", function() vim.diagnostic.goto_next() end)
-      nnoremap("]d", function() vim.diagnostic.goto_prev() end)
+      nnoremap("[d", function() vim.diagnostic.goto_next({float = true}) end)
+      nnoremap("]d", function() vim.diagnostic.goto_prev({float = true}) end)
       nnoremap("<leader>vca", function() vim.lsp.buf.code_action() end)
       nnoremap("<leader>vco", function() vim.lsp.buf.code_action({
           filter = function(code_action)
@@ -103,6 +122,7 @@ local function config(_config)
       nnoremap("<leader>vrr", function() vim.lsp.buf.references() end)
       nnoremap("<leader>vrn", function() vim.lsp.buf.rename() end)
       inoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
+      -- diagnostic_hover()
     end,
   }, _config or {})
 end
