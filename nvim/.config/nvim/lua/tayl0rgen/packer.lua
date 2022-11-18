@@ -25,6 +25,8 @@ return require("packer").startup(function(use)
   use("nvim-lua/lsp_extensions.nvim")
   use("glepnir/lspsaga.nvim")
   use("simrat39/symbols-outline.nvim")
+  use("windwp/nvim-autopairs")
+  use("windwp/nvim-ts-autotag")
 
   --null-ls
   use("jose-elias-alvarez/null-ls.nvim")
