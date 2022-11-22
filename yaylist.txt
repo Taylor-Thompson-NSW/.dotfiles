@@ -8,6 +8,8 @@ mongodb-bin
 mongodb-tools-bin
 mons
 nerd-fonts-complete
+nvim-packer-git
+oh-my-zsh-git
 paman
 polybar-git
 python2

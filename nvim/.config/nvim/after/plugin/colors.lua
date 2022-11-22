@@ -1,5 +1,5 @@
-vim.g.my_colorscheme = "gruvbox-material"
--- vim.g.my_colorscheme = "tokyonight"
+-- vim.g.my_colorscheme = "gruvbox-material"
+vim.g.my_colorscheme = "tokyonight"
 
 require("tokyonight").setup({
   -- your configuration comes here

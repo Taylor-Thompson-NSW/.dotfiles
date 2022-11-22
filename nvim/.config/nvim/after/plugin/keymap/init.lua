@@ -80,3 +80,6 @@ nnoremap("<Leader>rc", "<cmd>MagmaReevaluateCell<CR>", {silent=true})
 nnoremap("<Leader>rd", "<cmd>MagmaDelete<CR>", {silent=true})
 nnoremap("<Leader>ro", "<cmd>MagmaShowOutput<CR>", {silent=true})
 nnoremap("<Leader>eo", "<cmd>noautocmd MagmaEnterOutput<CR>", {silent=true})
+
+
+nnoremap("<Leader>so", "<cmd>SymbolsOutlineOpen<CR>", {silent=true})

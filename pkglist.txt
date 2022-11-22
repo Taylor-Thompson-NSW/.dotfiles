@@ -64,6 +64,7 @@ inetutils
 intel-media-driver
 iw
 iwd
+jedi-language-server
 jsoncpp
 kitty
 lf-bin
@@ -105,6 +106,8 @@ ntfs-3g
 nvidia
 nvidia-prime
 nvidia-settings
+nvim-packer-git
+oh-my-zsh-git
 onefetch
 open-vm-tools
 os-prober
@@ -174,6 +177,7 @@ yay
 yt-dlp
 yt-dlp-drop-in
 z
+zip
 zram-generator
 zsh
 zsh-syntax-highlighting

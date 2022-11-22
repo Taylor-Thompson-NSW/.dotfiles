@@ -74,19 +74,6 @@ tabnine:setup({
   snippet_placeholder = "..",
 })
 
-
--- local diagnostic_hover = function()
---   vim.api.nvim_create_augroup("diaghover", { clear = true })
---   vim.api.nvim_create_autocmd("DiagHover", {
---     group = "diaghover",
---     command = "autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()",
---   })
---   vim.api.nvim_create_autocmd("DiagHoverSig", {
---     group = "diaghover",
---     command = "autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()",
---   })
--- end
-
 local function config(_config)
   return vim.tbl_deep_extend("force", {
     capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
@@ -104,8 +91,8 @@ local function config(_config)
       nnoremap("<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
       nnoremap("K", function() vim.diagnostic.open_float() end)
       nnoremap("<leader>dl", "<cmd>Telescope diagnostics<CR>")
-      nnoremap("[d", function() vim.diagnostic.goto_next({float = true}) end)
-      nnoremap("]d", function() vim.diagnostic.goto_prev({float = true}) end)
+      nnoremap("[d", function() vim.diagnostic.goto_next({ float = true }) end)
+      nnoremap("]d", function() vim.diagnostic.goto_prev({ float = true }) end)
       nnoremap("<leader>vca", function() vim.lsp.buf.code_action() end)
       nnoremap("<leader>vco", function() vim.lsp.buf.code_action({
           filter = function(code_action)
@@ -127,6 +114,9 @@ local function config(_config)
   }, _config or {})
 end
 
+require("mason").setup()
+require("mason-lspconfig").setup()
+
 require("lspconfig").tsserver.setup(config())
 
 require("lspconfig").jedi_language_server.setup(config())
@@ -140,20 +130,19 @@ require("lspconfig").sumneko_lua.setup(config({
     Lua = {
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = "LuaJIT",
-        -- Setup your lua path
-        path = vim.split(package.path, ";"),
+        version = 'LuaJIT',
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = { "vim" },
+        globals = { 'vim' },
       },
       workspace = {
         -- Make the server aware of Neovim runtime files
-        library = {
-          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-          [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
-        },
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
       },
       format = {
         enable = true,
@@ -162,29 +151,11 @@ require("lspconfig").sumneko_lua.setup(config({
         defaultConfig = {
           indent_style = "space",
           indent_size = "2",
-        }
+        },
       },
     },
-  },
+  }
 }))
-
-
--- require("mason").setup()
-require("mason-lspconfig").setup()
-
-require("mason-lspconfig").setup_handlers {
-  -- The first entry (without a key) will be the default handler
-  -- and will be called for each installed server that doesn't have
-  -- a dedicated handler.
-  function(server_name) -- default handler (optional)
-    require("lspconfig")[server_name].setup(config())
-  end,
-  -- Next, you can provide a dedicated handler for specific servers.
-  -- For example, a handler override for the `rust_analyzer`:
-  -- ["rust_analyzer"] = function ()
-  --     require("rust-tools").setup {}
-  -- end
-}
 
 local opts = {
   -- whether to highlight the currently hovered symbol
@@ -204,7 +175,7 @@ local snippets_paths = function()
   local plugins = { "friendly-snippets" }
   local paths = {}
   local path
-  local root_path = vim.env.HOME .. ".local/share/nvim/site/pack/packer/start"
+  local root_path = vim.env.HOME .. "/.local/share/nvim/site/pack/packer/start/"
   for _, plug in ipairs(plugins) do
     path = root_path .. plug
     if vim.fn.isdirectory(path) ~= 0 then
