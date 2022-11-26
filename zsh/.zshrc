@@ -25,7 +25,7 @@ setopt   notify globdots correct pushdtohome cdablevars autolist
 setopt   autocd recexact longlistjobs
 setopt   autoresume histignoredups pushdsilent
 setopt   autopushd pushdminus extendedglob rcquotes mailwarning
-unsetopt bgnice autoparamslash correctall 
+unsetopt bgnice autoparamslash correctall
 
 ### Autoload zsh modules when they are referenced
 #################################################
@@ -354,6 +354,9 @@ export PATH=$RUBY_PATH:$LOCAL_BIN_PATH:$PATH
 
 #RUST PATH EXPORT
 export PATH="$HOME/.cargo/bin:$PATH"
+
+#MASON NEOVIM LSP PATH EXPORT
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
 #NODE MODULES - KEEP LAST and IT ADDS ITSELF
 _MY_NODE="$(which node)"
