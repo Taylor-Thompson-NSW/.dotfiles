@@ -119,6 +119,8 @@ require("mason-lspconfig").setup()
 
 require("lspconfig").tsserver.setup(config())
 
+require'lspconfig'.tailwindcss.setup{}
+
 require("lspconfig").jedi_language_server.setup(config())
 
 require("lspconfig").rust_analyzer.setup(config({

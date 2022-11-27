@@ -377,6 +377,7 @@ export NVM_DIR="$HOME/.nvm"
 #
 #Feh alias to open with filename & fit to window
 alias feh="feh -d -."
+alias feht="feh -t -. -E 256 -y 256"
 #Auto make parent dirs
 alias mkdir='mkdir -pv'
 #Making changing directories to backlight files a little faster
