@@ -28,6 +28,8 @@ return require("packer").startup(function(use)
   use("windwp/nvim-autopairs")
   use("windwp/nvim-ts-autotag")
 
+  --rust-tools
+  use 'simrat39/rust-tools.nvim'
   --null-ls
   use("jose-elias-alvarez/null-ls.nvim")
 

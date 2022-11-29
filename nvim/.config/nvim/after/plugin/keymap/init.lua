@@ -83,3 +83,6 @@ nnoremap("<Leader>eo", "<cmd>noautocmd MagmaEnterOutput<CR>", {silent=true})
 
 
 nnoremap("<Leader>so", "<cmd>SymbolsOutlineOpen<CR>", {silent=true})
+
+--Write current buff, close all others
+nnoremap("<leader>wbco", "<cmd>w | %bd | e#<CR>")
