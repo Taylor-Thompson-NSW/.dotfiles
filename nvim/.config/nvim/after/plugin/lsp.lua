@@ -119,34 +119,15 @@ require("mason-lspconfig").setup()
 
 require("lspconfig").tsserver.setup(config())
 
-require 'lspconfig'.tailwindcss.setup {}
+require 'lspconfig'.tailwindcss.setup(config())
 
 require("lspconfig").jedi_language_server.setup(config())
 
-require("lspconfig").rust_analyzer.setup(config({
-  cmd = { "rust-analyzer" },
-  settings = {
-    rust = {
-      unstable_features = true,
-      build_on_save = false,
-      all_features = true,
-    },
-  }
-}))
 
--- Rust Tools
-local rt = require("rust-tools")
-
-rt.setup({
-  server = {
-    on_attach = function(_, bufnr)
-      -- Hover actions
-      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-      -- Code action groups
-      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-    end,
-  },
-})
+-- Rust Tools --
+-- This also configures rust-analyzer automatically
+require("rust-tools").setup(config())
+--
 --
 
 require("lspconfig").sumneko_lua.setup(config({
