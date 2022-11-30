@@ -74,43 +74,47 @@ tabnine:setup({
   snippet_placeholder = "..",
 })
 
+--Extracted this into a function since I have to pass it separately
+--to rust-tools for some reason..
+local function lsp_on_attach_config()
+  vim.diagnostic.config({
+    float = {
+      source = 'always',
+      border = border
+    },
+  })
+  nnoremap("gd", function() vim.lsp.buf.definition() end)
+  nnoremap("gt", function() vim.lsp.buf.type_definition() end)
+  nnoremap("gi", function() vim.lsp.buf.implementation() end)
+  nnoremap("<leader>K", function() vim.lsp.buf.hover() end)
+  nnoremap("<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
+  nnoremap("K", function() vim.diagnostic.open_float() end)
+  nnoremap("<leader>dl", "<cmd>Telescope diagnostics<CR>")
+  nnoremap("[d", function() vim.diagnostic.goto_next({ float = true }) end)
+  nnoremap("]d", function() vim.diagnostic.goto_prev({ float = true }) end)
+  nnoremap("<leader>vca", function() vim.lsp.buf.code_action() end)
+  nnoremap("<leader>vco", function() vim.lsp.buf.code_action({
+      filter = function(code_action)
+        if not code_action or not code_action.data then
+          return false
+        end
+
+        local data = code_action.data.id
+        return string.sub(data, #data - 1, #data) == ":0"
+      end,
+      apply = true
+    })
+  end)
+  nnoremap("<leader>vrr", function() vim.lsp.buf.references() end)
+  nnoremap("<leader>vrn", function() vim.lsp.buf.rename() end)
+  inoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
+  -- diagnostic_hover()
+end
+
 local function config(_config)
   return vim.tbl_deep_extend("force", {
     capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
-    on_attach = function()
-      vim.diagnostic.config({
-        float = {
-          source = 'always',
-          border = border
-        },
-      })
-      nnoremap("gd", function() vim.lsp.buf.definition() end)
-      nnoremap("gt", function() vim.lsp.buf.type_definition() end)
-      nnoremap("gi", function() vim.lsp.buf.implementation() end)
-      nnoremap("<leader>K", function() vim.lsp.buf.hover() end)
-      nnoremap("<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
-      nnoremap("K", function() vim.diagnostic.open_float() end)
-      nnoremap("<leader>dl", "<cmd>Telescope diagnostics<CR>")
-      nnoremap("[d", function() vim.diagnostic.goto_next({ float = true }) end)
-      nnoremap("]d", function() vim.diagnostic.goto_prev({ float = true }) end)
-      nnoremap("<leader>vca", function() vim.lsp.buf.code_action() end)
-      nnoremap("<leader>vco", function() vim.lsp.buf.code_action({
-          filter = function(code_action)
-            if not code_action or not code_action.data then
-              return false
-            end
-
-            local data = code_action.data.id
-            return string.sub(data, #data - 1, #data) == ":0"
-          end,
-          apply = true
-        })
-      end)
-      nnoremap("<leader>vrr", function() vim.lsp.buf.references() end)
-      nnoremap("<leader>vrn", function() vim.lsp.buf.rename() end)
-      inoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
-      -- diagnostic_hover()
-    end,
+    on_attach = lsp_on_attach_config(),
   }, _config or {})
 end
 
@@ -127,7 +131,14 @@ require("lspconfig").jedi_language_server.setup(config())
 -- Rust Tools --
 -- This also configures rust-analyzer automatically
 require("rust-tools").setup(config())
---
+local rt = require("rust-tools")
+
+rt.setup({
+  server = {
+    on_attach = lsp_on_attach_config(),
+  },
+})
+-- require("lspconfig").rust_analyzer.setup(config())
 --
 
 require("lspconfig").sumneko_lua.setup(config({

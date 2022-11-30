@@ -24,14 +24,6 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufEnter", "BufWinEnter", "TabEnter"}, {
-    group = EinGroup,
-    pattern = "*.rs",
-    callback = function()
-        require("lsp_extensions").inlay_hints{}
-    end
-})
-
 autocmd({"BufWritePre"}, {
     group = EinGroup,
     pattern = "*",
