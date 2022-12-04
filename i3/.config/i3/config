@@ -24,7 +24,7 @@ bindsym Shift+Mod4+$mod+s exec flameshot gui
 #Screenshot straight to clipboard with maim
 bindsym Shift+Mod4+s exec /home/tayl0r/.local/bin/maimclip
 
-# Open dmenu 
+# Open dmenu
 bindsym $mod+d exec dmenu_run -fn 'Overpass Mono:pixelsize=18' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
 
 # Change focus
@@ -163,7 +163,7 @@ client.background       #ffffff
 # Apply .Xresource. As far as I know, only needed here if using starx (dont have a login manager)
 exec_always --no-startup-id xrdb ~/.Xresources
 
-# Apply the last colorscheme generated without changing the background by using -n 
+# Apply the last colorscheme generated without changing the background by using -n
 exec_always --no-startup-id wal -R
 
 # Apply a background different than the one used by wal
@@ -196,6 +196,7 @@ bindsym Mod4+j exec --no-startup-id picom-trans -c -5
 bindsym Mod4+k exec --no-startup-id picom-trans -c +5
 
 
+
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
 
@@ -205,6 +206,8 @@ smart_gaps inverse_outer
 gaps inner 12
 gaps outer 0
 
+bindsym $mod+Shift+i gaps inner all set 12
+bindsym $mod+Shift+o gaps inner all set 0
 
 bindcode 115 exec amixer sset 'Master' 15%
 #bindcode 114 exec --no-startup-id amixer sset 'Master' 15%
