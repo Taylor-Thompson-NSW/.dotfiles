@@ -15,35 +15,60 @@ return require("packer").startup(function(use)
   -- Close tags
   use("alvan/vim-closetag")
 
+
+  --LSP
+  use {
+	  'VonHeikemen/lsp-zero.nvim',
+	  requires = {
+		  -- LSP Support
+		  {'neovim/nvim-lspconfig'},
+		  {'williamboman/mason.nvim'},
+		  {'williamboman/mason-lspconfig.nvim'},
+
+		  -- Autocompletion
+		  {'hrsh7th/nvim-cmp'},
+		  {'hrsh7th/cmp-buffer'},
+		  {'hrsh7th/cmp-path'},
+		  {'saadparwaiz1/cmp_luasnip'},
+		  {'hrsh7th/cmp-nvim-lsp'},
+		  {'hrsh7th/cmp-nvim-lua'},
+
+		  -- Snippets
+		  {'L3MON4D3/LuaSnip'},
+		  {'rafamadriz/friendly-snippets'},
+	  }
+  }
+  --
+
   -- Plebvim lsp Plugins - from ThePrimeagen mostly
-  use("neovim/nvim-lspconfig")
-  use("hrsh7th/nvim-cmp")
-  use("hrsh7th/cmp-nvim-lsp")
-  use("hrsh7th/cmp-buffer")
-  use("onsails/lspkind-nvim")
-  use("saadparwaiz1/cmp_luasnip")
-  use("nvim-lua/lsp_extensions.nvim")
-  use("glepnir/lspsaga.nvim")
-  use("simrat39/symbols-outline.nvim")
-  use("windwp/nvim-autopairs")
-  use("windwp/nvim-ts-autotag")
+  --use("neovim/nvim-lspconfig")
+  --use("hrsh7th/nvim-cmp")
+  --use("hrsh7th/cmp-nvim-lsp")
+  --use("hrsh7th/cmp-buffer")
+  --use("onsails/lspkind-nvim")
+  --use("saadparwaiz1/cmp_luasnip")
+  --use("nvim-lua/lsp_extensions.nvim")
+  --use("glepnir/lspsaga.nvim")
+  --use("simrat39/symbols-outline.nvim")
+  --use("windwp/nvim-autopairs")
+  --use("windwp/nvim-ts-autotag")
 
-  --rust-tools
-  use 'simrat39/rust-tools.nvim'
-  --null-ls
-  use("jose-elias-alvarez/null-ls.nvim")
+  ----rust-tools
+  --use 'simrat39/rust-tools.nvim'
+  ----null-ls
+  --use("jose-elias-alvarez/null-ls.nvim")
 
-  --MASON & MASON CFG
-  use("williamboman/mason.nvim")
-  use("williamboman/mason-lspconfig.nvim")
+  ----MASON & MASON CFG
+  --use("williamboman/mason.nvim")
+  --use("williamboman/mason-lspconfig.nvim")
 
-  -------------------------------------------------------
-  --SOMETIMES YOU HAVE TO MANUALLY INSTALL THE INSTALL.SH
-  --For my systems sometimes it was located at:
-  --$HOME/.local/share/nvim/plugged
-  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'} -------------------------------------------------------
-  -------------------------------------------------------
-  -------------------------------------------------------
+  ---------------------------------------------------------
+  ----SOMETIMES YOU HAVE TO MANUALLY INSTALL THE INSTALL.SH
+  ----For my systems sometimes it was located at:
+  ----$HOME/.local/share/nvim/plugged
+  --use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'} -------------------------------------------------------
+  ---------------------------------------------------------
+  ---------------------------------------------------------
 
   --Harpoon by ThePrimeagen
   use("ThePrimeagen/harpoon")

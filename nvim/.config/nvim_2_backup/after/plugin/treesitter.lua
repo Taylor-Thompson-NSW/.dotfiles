@@ -1,5 +1,4 @@
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "help", "javascript", "typescript", "c", "lua", "rust" },
   highlight = {
     enable = true,
   },
@@ -17,7 +16,7 @@ require('nvim-treesitter.configs').setup {
     enable_autocmd = false,
 
     config = {
-      typescript = {
+      typescript = { 
         __default = '// %s',
         __multiline = '// %s',
         jsx_element = '{/* %s */}',
@@ -40,5 +39,5 @@ require('nvim-treesitter.configs').setup {
           },
         }
       }
-
+  
 }}
