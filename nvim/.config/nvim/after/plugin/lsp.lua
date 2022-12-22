@@ -80,6 +80,27 @@ lsp.configure('sumneko_lua', {
   }
 })
 
+--function for Organizing Imports in tsserver
+local function organize_imports()
+  local params = {
+    command = "_typescript.organizeImports",
+    arguments = { vim.api.nvim_buf_get_name(0) },
+    title = ""
+  }
+  vim.lsp.buf.execute_command(params)
+end
+
+--passing it to the tsserver config, anything not seen here
+--uses default values from lsp-zero
+lsp.configure('tsserver', {
+  commands = {
+    OrganizeImports = {
+      organize_imports,
+      description = "Organize Imports"
+    }
+  }
+})
+
 local rust_lsp = lsp.build_options('rust_analyzer', {})
 
 lsp.setup()
