@@ -35,7 +35,8 @@ vim.keymap.set("v", "<leader>(", "<esc>`>a)<esc>`<i(<esc>")
 vim.keymap.set("v", "<leader>[", "<esc>`>a]<esc>`<i[<esc>")
 vim.keymap.set("v", "<leader>{", "<esc>`>a}<esc>`<i{<esc>")
 --
-vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+--search and replace
+vim.keymap.set("n", "<leader>sar", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- format buffer
 vim.keymap.set("n", "<leader>for", function()

@@ -40,35 +40,16 @@ return require("packer").startup(function(use)
   }
   --
 
-  -- Plebvim lsp Plugins - from ThePrimeagen mostly
-  --use("neovim/nvim-lspconfig")
-  --use("hrsh7th/nvim-cmp")
-  --use("hrsh7th/cmp-nvim-lsp")
-  --use("hrsh7th/cmp-buffer")
-  --use("onsails/lspkind-nvim")
-  --use("saadparwaiz1/cmp_luasnip")
-  --use("nvim-lua/lsp_extensions.nvim")
-  --use("glepnir/lspsaga.nvim")
-  --use("simrat39/symbols-outline.nvim")
-  --use("windwp/nvim-autopairs")
-  --use("windwp/nvim-ts-autotag")
+  --symbols outline & autopairs/tags
+  use("simrat39/symbols-outline.nvim")
+  use("windwp/nvim-autopairs")
+  use("windwp/nvim-ts-autotag")
 
-  ----rust-tools
-  --use 'simrat39/rust-tools.nvim'
-  ----null-ls
-  --use("jose-elias-alvarez/null-ls.nvim")
+  --rust-tools
+  use 'simrat39/rust-tools.nvim'
+  --null-ls
+  use("jose-elias-alvarez/null-ls.nvim")
 
-  ----MASON & MASON CFG
-  --use("williamboman/mason.nvim")
-  --use("williamboman/mason-lspconfig.nvim")
-
-  ---------------------------------------------------------
-  ----SOMETIMES YOU HAVE TO MANUALLY INSTALL THE INSTALL.SH
-  ----For my systems sometimes it was located at:
-  ----$HOME/.local/share/nvim/plugged
-  --use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'} -------------------------------------------------------
-  ---------------------------------------------------------
-  ---------------------------------------------------------
 
   --Harpoon by ThePrimeagen
   use("ThePrimeagen/harpoon")
@@ -89,6 +70,9 @@ return require("packer").startup(function(use)
   use("sbdchd/neoformat")
   --vim-graphql
   use("jparise/vim-graphql")
+
+  --git
+  use('tpope/vim-fugitive')
 
   --COLOR SCHEMES
   use("sainnhe/gruvbox-material")
