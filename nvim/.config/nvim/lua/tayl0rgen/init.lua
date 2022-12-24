@@ -1,6 +1,5 @@
 require("tayl0rgen.set")
 require("tayl0rgen.packer")
-require("tayl0rgen.keymap")
 require("tayl0rgen.telescope")
 
 local augroup = vim.api.nvim_create_augroup

@@ -1,88 +1,71 @@
-local Remap = require("tayl0rgen.keymap")
-local nnoremap = Remap.nnoremap
-local vnoremap = Remap.vnoremap
-local inoremap = Remap.inoremap
-local xnoremap = Remap.xnoremap
-local nmap = Remap.nmap
-
-
-nmap( "<leader>vm", ":vsp $MYVIMRC<CR>", {nowait = true})
-nmap( "<leader>sv", ":source $MYVIMRC<CR>", {nowait = true})
+vim.keymap.set("n", "<leader>vm", ":vsp $MYVIMRC<CR>", {nowait = true})
+vim.keymap.set("n", "<leader>sv", ":source $MYVIMRC<CR>", {nowait = true})
 
 -- resize current buffer by +/- 5
 -- simple way to resize when I have splits pretty much
-nnoremap("<leader><Left>", ":vertical resize -5<cr>")
-nnoremap("<leader><Down>", ":resize +5<cr>")
-nnoremap("<leader><Up>", ":resize -5<cr>")
-nnoremap("<leader><Right>", ":vertical resize +5<cr>")
+vim.keymap.set("n", "<leader><Left>", ":vertical resize -5<cr>")
+vim.keymap.set("n", "<leader><Down>", ":resize +5<cr>")
+vim.keymap.set("n", "<leader><Up>", ":resize -5<cr>")
+vim.keymap.set("n", "<leader><Right>", ":vertical resize +5<cr>")
 
-inoremap("jk", "<esc>")
-nnoremap("<leader>nt", ":Ex<CR>", {silent=true})
+vim.keymap.set("i", "jk", "<esc>")
+vim.keymap.set("n", "<leader>nt", ":Ex<CR>", {silent=true})
 --tmux sessionizer
-nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-nnoremap("<Leader><space>", ":noh<cr>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<Leader><space>", ":noh<cr>")
 -- greatest remaps ever from primeagen
-nnoremap("<C-d>", "<C-d>zz")
-nnoremap("<C-u>", "<C-u>zz")
-vnoremap("J", ":m '>+1<CR>gv=gv")
-vnoremap("K", ":m '<-2<CR>gv=gv")
-nnoremap("Y", "yg$")
-nnoremap("n", "nzzzv")
-nnoremap("N", "Nzzzv")
-nnoremap("J", "mzJ`z")
-xnoremap("<leader>p", "\"_dP")
-nnoremap("<leader>y", "\"+y")
-vnoremap("<leader>y", "\"+y")
-nmap("<leader>Y", "\"+Y")
-nnoremap("<leader>d", "\"_d")
-vnoremap("<leader>d", "\"_d")
-vnoremap("<leader>d", "\"_d")
-vnoremap("<leader>'", "<esc>`>a'<esc>`<i'<esc>")
-vnoremap("<leader>\"", "<esc>`>a\"<esc>`<i\"<esc>")
-vnoremap("<leader>(", "<esc>`>a)<esc>`<i(<esc>")
-vnoremap("<leader>[", "<esc>`>a]<esc>`<i[<esc>")
-vnoremap("<leader>{", "<esc>`>a}<esc>`<i{<esc>")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "Y", "yg$")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("n", "<leader>d", "\"_d")
+vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("v", "<leader>'", "<esc>`>a'<esc>`<i'<esc>")
+vim.keymap.set("v", "<leader>\"", "<esc>`>a\"<esc>`<i\"<esc>")
+vim.keymap.set("v", "<leader>(", "<esc>`>a)<esc>`<i(<esc>")
+vim.keymap.set("v", "<leader>[", "<esc>`>a]<esc>`<i[<esc>")
+vim.keymap.set("v", "<leader>{", "<esc>`>a}<esc>`<i{<esc>")
 --
+vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- format buffer
-nnoremap("<leader>for", function()
+vim.keymap.set("n", "<leader>for", function()
     vim.lsp.buf.format()
 end)
 
 -- Undo breakpoints
-inoremap(",", ",<c-g>u")
-inoremap(".", ".<c-g>u")
-inoremap("!", "!<c-g>u")
-inoremap("?", "?<c-g>u")
-inoremap("[", "[<c-g>u")
-inoremap("]", "]<c-g>u")
-inoremap("{", "{<c-g>u")
-inoremap("}", "}<c-g>u")
+vim.keymap.set("i", ",", ",<c-g>u")
+vim.keymap.set("i", ".", ".<c-g>u")
+vim.keymap.set("i", "!", "!<c-g>u")
+vim.keymap.set("i", "?", "?<c-g>u")
+vim.keymap.set("i", "[", "[<c-g>u")
+vim.keymap.set("i", "]", "]<c-g>u")
+vim.keymap.set("i", "{", "{<c-g>u")
+vim.keymap.set("i", "}", "}<c-g>u")
 
 --remaps for tabs
 -- Tab navigation like Firefox.
-nnoremap("<C-l>", "gt<CR>")
-nnoremap("<C-h>", "gT<CR>")
-nnoremap("<C-t>", ":tabnew<CR>")
-nnoremap("<C-l>", "gt<CR>")
-nnoremap("<C-h>", "gT<CR>")
-nnoremap("<C-t>", ":tabnew<CR>")
-nnoremap("<leader>h", ":wincmd h<CR>")
-nnoremap("<leader>j", ":wincmd j<CR>")
-nnoremap("<leader>k", ":wincmd k<CR>")
-nnoremap("<leader>l", ":wincmd l<CR>")
+vim.keymap.set("n", "<C-l>", "gt<CR>")
+vim.keymap.set("n", "<C-h>", "gT<CR>")
+vim.keymap.set("n", "<C-t>", ":tabnew<CR>")
+vim.keymap.set("n", "<C-l>", "gt<CR>")
+vim.keymap.set("n", "<C-h>", "gT<CR>")
+vim.keymap.set("n", "<C-t>", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>h", ":wincmd h<CR>")
+vim.keymap.set("n", "<leader>j", ":wincmd j<CR>")
+vim.keymap.set("n", "<leader>k", ":wincmd k<CR>")
+vim.keymap.set("n", "<leader>l", ":wincmd l<CR>")
 
---Jupyter Magma Keybindings
-nnoremap("<Leader>r", "<cmd>MagmaEvaluateOperator<CR>", {expr=true, silent=true})
-nnoremap("<Leader>rr", "<cmd>MagmaEvaluateLine<CR>", {silent=true})
-xnoremap("<Leader>r", ":<C-u>MagmaEvaluateVisual<CR>", {silent=true, nowait=true})
-nnoremap("<Leader>rc", "<cmd>MagmaReevaluateCell<CR>", {silent=true})
-nnoremap("<Leader>rd", "<cmd>MagmaDelete<CR>", {silent=true})
-nnoremap("<Leader>ro", "<cmd>MagmaShowOutput<CR>", {silent=true})
-nnoremap("<Leader>eo", "<cmd>noautocmd MagmaEnterOutput<CR>", {silent=true})
-
-
-nnoremap("<Leader>so", "<cmd>SymbolsOutlineOpen<CR>", {silent=true})
+vim.keymap.set("n", "<Leader>so", "<cmd>SymbolsOutlineOpen<CR>", {silent=true})
 
 --Write current buff, close all others
-nnoremap("<leader>wbco", "<cmd>w | %bd | e#<CR>")
+vim.keymap.set("n", "<leader>wbco", "<cmd>w | %bd | e#<CR>")
