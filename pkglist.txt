@@ -177,6 +177,8 @@ yay
 yt-dlp
 yt-dlp-drop-in
 z
+zathura
+zathura-pdf-mupdf
 zip
 zram-generator
 zsh
