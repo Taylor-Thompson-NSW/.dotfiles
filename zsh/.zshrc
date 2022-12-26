@@ -1,4 +1,4 @@
-#######################################################
+######################################################
 ####### Anarchy ZSH configuration file    #######
 #######################################################
 
@@ -384,6 +384,3 @@ alias mkdir='mkdir -pv'
 alias changebrightness='cd /sys/class/backlight/'
 
 alias fuzzypwd='cd $(find * -maxdepth 3 -type d \( -name node_modules -o -name .git \) -prune -o -print| fzf)'
-
-
-
