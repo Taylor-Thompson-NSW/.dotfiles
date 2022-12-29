@@ -160,7 +160,7 @@ set $unfocused_border #1D1F21
 set $focused_border #555658
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #434343 #434343 #D2D2D2 #555658   #555658
+client.focused          #434343 #434343 #D2D2D2 #444444   #444444
 client.focused_inactive #434343 #222222 #888888 #1D1F21   #1D1F21
 client.unfocused        #1D1F21 #222222 #888888 #1D1F21   #1D1F21
 client.urgent           #1D1F21 #222222 #888888 #1D1F21   #1D1F21
