@@ -4,7 +4,9 @@ set $mod Mod1
 # Set display resolution
 exec_always xrandr --output eDP-1 --auto --output HDMI-A-0 --auto
 
-font pango:Hack Regular 8
+# font pango:Hack Regular 12
+font pango:Overpass Mono 12
+# font pango:Source Code Pro 12
 
 # Press mod key to be able to resize floating windows
 floating_modifier $mod
@@ -158,11 +160,11 @@ set $unfocused_border #1D1F21
 set $focused_border #555658
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $focused_border $focused_border #ffffff $focused_border $focused_border $focused_border
-client.focused_inactive #ffffff #ffffff #ffffff $focused_border  $focused_border
-client.unfocused        $unfocused_border $unfocused_border $unfocused_border $unfocused_border   $unfocused_border
-client.urgent           #ffffff #ffffff #ffffff $focused_border   $focused_border
-client.placeholder      #ffffff #ffffff #ffffff $focused_border   $focused_border
+client.focused          #434343 #434343 #D2D2D2 #555658   #555658
+client.focused_inactive #434343 #222222 #D2D2D2 #555658   #555658
+client.unfocused        #1D1F21 #222222 #888888 #1D1F21   #1D1F21
+client.urgent           #1D1F21 #222222 #D2D2D2 #1D1F21   #1D1F21
+client.placeholder      #1D1F21 #222222 #D2D2D2 #1D1F21   #1D1F21
 
 client.background       #ffffff
 
