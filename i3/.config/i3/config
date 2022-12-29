@@ -39,6 +39,12 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+#focus parent and move left/right
+bindsym $mod+Mod4+j focus parent; focus left
+bindsym $mod+Mod4+Left focus parent; focus left
+bindsym $mod+Mod4+semicolon focus parent; focus right
+bindsym $mod+Mod4+Right exec focus parent; focus right
+
 # Move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
@@ -152,9 +158,9 @@ set $unfocused_border #1D1F21
 set $focused_border #555658
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #ffffff #ffffff #ffffff $focused_border   $focused_border
+client.focused          $focused_border $focused_border #ffffff $focused_border $focused_border $focused_border
 client.focused_inactive #ffffff #ffffff #ffffff $focused_border  $focused_border
-client.unfocused        #ffffff #ffffff #ffffff $unfocused_border   $unfocused_border
+client.unfocused        $unfocused_border $unfocused_border $unfocused_border $unfocused_border   $unfocused_border
 client.urgent           #ffffff #ffffff #ffffff $focused_border   $focused_border
 client.placeholder      #ffffff #ffffff #ffffff $focused_border   $focused_border
 
