@@ -25,6 +25,7 @@ discord
 dmenu
 docker
 docker-compose
+dunst
 easyeffects
 efibootmgr
 elementary-icon-theme
@@ -158,6 +159,7 @@ vulkan-radeon
 wget
 which
 wireless_tools
+wmctrl
 xcalib
 xclip
 xdg-user-dirs
