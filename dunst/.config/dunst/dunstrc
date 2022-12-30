@@ -1,0 +1,14 @@
+[discord] # a name for the filter: this is just used to identify what we are doing here
+    appname = "discord" # this is the application name, see below
+    summary = "*" # this is the filter criterion applied to the message, using an asterisk means all messages from specified class.
+    # urgency = critical # those attributes could be used to set details of the message in the script called below
+    format = "" # could be used to alter the popup text, see below
+    script = ~/.dotfiles/tayl0rscripts/.local/bin/dunst-urgent-notifications.sh # this is the script that is called, see below
+
+
+[slack] # a name for the filter: this is just used to identify what we are doing here
+    appname = "slack" # this is the application name, see below
+    summary = "*" # this is the filter criterion applied to the message, using an asterisk means all messages from specified class.
+    # urgency = critical # those attributes could be used to set details of the message in the script called below
+    format = "" # could be used to alter the popup text, see below
+    script = ~/.dotfiles/tayl0rscripts/.local/bin/dunst-urgent-notifications.sh # this is the script that is called, see below
