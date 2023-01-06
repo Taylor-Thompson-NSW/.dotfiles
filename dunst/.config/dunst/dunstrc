@@ -1,3 +1,16 @@
+[global]
+width = 300
+format = "<b>%s</b> <small>(%a)</small>\n<small>%b</small>"
+frame-width: 3
+follow=keyboard
+font=Overpass Mono:pixelsize=10;2.25
+background = "#1D1F21"
+foreground = "#b3b3b3"
+frame-color = "#434343"
+alignment = left
+vertical_alignment = center
+
+
 [discord] # a name for the filter: this is just used to identify what we are doing here
     appname = "discord" # this is the application name, see below
     summary = "*" # this is the filter criterion applied to the message, using an asterisk means all messages from specified class.
