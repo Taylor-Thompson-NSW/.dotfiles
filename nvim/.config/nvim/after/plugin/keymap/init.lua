@@ -1,5 +1,5 @@
-vim.keymap.set("n", "<leader>vm", ":vsp $MYVIMRC<CR>", {nowait = true})
-vim.keymap.set("n", "<leader>sv", ":source $MYVIMRC<CR>", {nowait = true})
+vim.keymap.set("n", "<leader>vm", ":vsp $MYVIMRC<CR>", { nowait = true })
+vim.keymap.set("n", "<leader>sv", ":source $MYVIMRC<CR>", { nowait = true })
 
 -- resize current buffer by +/- 5
 -- simple way to resize when I have splits pretty much
@@ -9,7 +9,7 @@ vim.keymap.set("n", "<leader><Up>", ":resize -5<cr>")
 vim.keymap.set("n", "<leader><Right>", ":vertical resize +5<cr>")
 
 vim.keymap.set("i", "jk", "<esc>")
-vim.keymap.set("n", "<leader>nt", ":Ex<CR>", {silent=true})
+vim.keymap.set("n", "<leader>nt", ":Ex<CR>", { silent = true })
 --tmux sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<Leader><space>", ":noh<cr>")
@@ -40,7 +40,7 @@ vim.keymap.set("n", "<leader>sar", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left
 
 -- format buffer
 vim.keymap.set("n", "<leader>for", function()
-    vim.lsp.buf.format()
+  vim.lsp.buf.format()
 end)
 
 -- Undo breakpoints
@@ -66,7 +66,7 @@ vim.keymap.set("n", "<leader>j", ":wincmd j<CR>")
 vim.keymap.set("n", "<leader>k", ":wincmd k<CR>")
 vim.keymap.set("n", "<leader>l", ":wincmd l<CR>")
 
-vim.keymap.set("n", "<Leader>so", "<cmd>SymbolsOutlineOpen<CR>", {silent=true})
+vim.keymap.set("n", "<Leader>so", "<cmd>SymbolsOutlineOpen<CR>", { silent = true })
 
 --Write current buff, close all others
 vim.keymap.set("n", "<leader>wbco", "<cmd>w | %bd | e#<CR>")

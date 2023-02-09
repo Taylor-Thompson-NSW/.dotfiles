@@ -113,5 +113,10 @@ require('rust-tools').setup({ server = rust_lsp })
 vim.diagnostic.config({
   virtual_text = true,
   underline = true,
-  float = true
+  float = {
+    show_header = true,
+    source = 'always',
+    border = 'rounded',
+    focusable = true,
+  }
 })
