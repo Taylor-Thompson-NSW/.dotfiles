@@ -215,7 +215,7 @@ smart_gaps on
 # Only enable outer gaps when there is exactly one container
 smart_gaps inverse_outer
 
-gaps inner 12
+gaps inner 0
 gaps outer 0
 
 bindsym $mod+Shift+i gaps inner all set 12
