@@ -7,6 +7,7 @@ autoconf
 automake
 autotiling-git
 base
+bashmount
 binutils
 bison
 blueman
@@ -55,7 +56,7 @@ gzip
 helvum
 htop
 httpie
-i3-gaps
+i3-wm
 i3blocks
 i3lock
 i3status
@@ -87,6 +88,7 @@ m4
 maim
 make
 man-pages
+mariadb
 mesa-utils
 mongodb-bin
 mongodb-tools-bin
@@ -146,7 +148,6 @@ sudo
 supergfxctl
 texinfo
 thunderbird
-ticker
 tickrs
 tmux
 ttf-dejavu
@@ -158,6 +159,8 @@ vulkan-intel
 vulkan-radeon
 wget
 which
+wine-staging
+winetricks
 wireless_tools
 wmctrl
 xcalib

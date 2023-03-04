@@ -1,6 +1,7 @@
 ani-cli-git
 asusctl-git
 autotiling-git
+bashmount
 captive-browser-git
 google-chrome
 lf-bin
@@ -15,7 +16,6 @@ polybar-git
 python2
 python38
 slack-desktop
-ticker
 yay
 yt-dlp-drop-in
 zsh-z-git
