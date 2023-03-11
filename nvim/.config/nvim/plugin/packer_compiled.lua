@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/tayl0r/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/tayl0r/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/tayl0r/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -198,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tayl0r/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["rose-pine"] = {
+    loaded = true,
+    path = "/home/tayl0r/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
   },
   ["rust-tools.nvim"] = {
     loaded = true,

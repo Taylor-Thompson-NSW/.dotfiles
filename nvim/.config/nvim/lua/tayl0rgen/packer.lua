@@ -73,9 +73,11 @@ return require("packer").startup(function(use)
   --git
   use('tpope/vim-fugitive')
 
-  --COLOR SCHEMES
+  --color schemes
   use("sainnhe/gruvbox-material")
   use { "folke/tokyonight.nvim", branch = "main" }
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
 
   -----------------------------
   --Jupyter & Neovim plugin - Search specifically for: Magma
