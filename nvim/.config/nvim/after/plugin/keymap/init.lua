@@ -22,15 +22,15 @@ vim.keymap.set("n", "Y", "yg$")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("x", "<leader>p", "\"_dP")
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("x", "<leader>p", '"_dP')
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>Y", '"+Y')
+vim.keymap.set("n", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>'", "<esc>`>a'<esc>`<i'<esc>")
-vim.keymap.set("v", "<leader>\"", "<esc>`>a\"<esc>`<i\"<esc>")
+vim.keymap.set("v", '<leader>"', '<esc>`>a"<esc>`<i"<esc>')
 vim.keymap.set("v", "<leader>(", "<esc>`>a)<esc>`<i(<esc>")
 vim.keymap.set("v", "<leader>[", "<esc>`>a]<esc>`<i[<esc>")
 vim.keymap.set("v", "<leader>{", "<esc>`>a}<esc>`<i{<esc>")
@@ -39,8 +39,14 @@ vim.keymap.set("v", "<leader>{", "<esc>`>a}<esc>`<i{<esc>")
 vim.keymap.set("n", "<leader>sar", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- format buffer
+--
 vim.keymap.set("n", "<leader>for", function()
-  vim.lsp.buf.format()
+  vim.lsp.buf.format({
+    filter = function(client)
+      return client.name ~= "tsserver"
+    end,
+    name = "null-ls",
+  })
 end)
 
 -- Undo breakpoints
