@@ -1,0 +1,9 @@
+.tabbrowser-tab {
+min-width: initial !important;
+}
+.tab-content {
+overflow: hidden !important;
+}
+
+.tabbrowser-tab[pinned] { width: 45px !important; }
+.tab-label-container[pinned] { visibility: hidden !important; }
