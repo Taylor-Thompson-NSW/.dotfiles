@@ -383,4 +383,4 @@ alias mkdir='mkdir -pv'
 #Making changing directories to backlight files a little faster
 alias changebrightness='cd /sys/class/backlight/'
 
-alias fuzzypwd='cd $(find * -maxdepth 3 -type d \( -name node_modules -o -name .git \) -prune -o -print| fzf)'
+alias fuzzypwd='cd $(find * -maxdepth 1 -type d \( -name node_modules -o -name .git \) -prune -o -print| fzf)'
