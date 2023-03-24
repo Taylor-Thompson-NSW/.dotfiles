@@ -24,7 +24,7 @@
   border-radius: 0;
   font-family: 'Overpass Mono';
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
   min-height: 0;
   background: @background;
 }
@@ -79,6 +79,8 @@ tooltip {
 #tray,
 #backlight,
 #cpu,
+#custom-spacer,
+#custom-pisces-and-etc,
 #memory {
   background: @background;
   color: @color2;

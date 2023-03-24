@@ -12,16 +12,28 @@
     ],
     "modules-center": ["clock"],
     "modules-right": [
+      "custom/pisces-and-etc",
+      "custom/spacer",
       "pulseaudio",
       "pulseaudio#microphone",
+      "custom/spacer",
+      "battery",
       "cpu",
-      "memory",
-      "battery"
+      "memory"
       ],
+
+    "custom/spacer": {
+      "format": " | "
+    },
+
+    "custom/pisces-and-etc" : {
+      "format": " ♓︎  ∞ "
+    },
 
     "hyprland/window": {
         "format": "{}"
     },
+
     "wlr/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -70,7 +82,7 @@
 
     "clock": {
         "timezone": "America/New_York",
-        "format": "{: %d/%m  %R %p}",
+        "format": "{: %d/%m  %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "pulseaudio": {
