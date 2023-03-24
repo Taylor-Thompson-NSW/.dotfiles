@@ -8,6 +8,7 @@ automake
 autotiling-git
 base
 bashmount
+bemenu
 binutils
 bison
 blueman
@@ -17,6 +18,7 @@ bluez-utils
 bottom
 captive-browser-git
 chromium
+clipman
 colord
 cpupower
 dconf-editor
@@ -48,6 +50,7 @@ gimp
 git
 google-chrome
 grep
+grimshot
 groff
 gtkmm
 gvfs-mtp
@@ -56,11 +59,14 @@ gzip
 helvum
 htop
 httpie
+hyprland-git
+hyprpaper-git
 i3-wm
 i3blocks
 i3lock
 i3status
 imagemagick
+imv
 imwheel
 inetutils
 intel-media-driver
@@ -74,6 +80,7 @@ libreoffice-fresh
 libtool
 libva-intel-driver
 libva-mesa-driver
+light
 lightdm
 lightdm-gtk-greeter
 linux
@@ -87,6 +94,7 @@ lynx
 m4
 maim
 make
+man-db
 man-pages
 mariadb
 mesa-utils
@@ -118,6 +126,7 @@ otf-overpass
 pacman
 pacman-contrib
 paman
+pamixer
 pantheon-music
 patch
 pavucontrol
@@ -126,6 +135,7 @@ picom
 pipewire
 pipewire-pulse
 pkgconf
+polkit-kde-agent
 polybar-git
 powertop
 pulseaudio-alsa
@@ -134,8 +144,10 @@ python-pip
 python-pywal
 python2
 python38
+qt6-wayland
 ranger
 ripgrep
+rofi
 ruby
 rxvt-unicode
 sed
@@ -146,6 +158,11 @@ stow
 strace
 sudo
 supergfxctl
+sway
+swaybg
+swayimg
+swaylock
+sxiv
 texinfo
 thunderbird
 tickrs
@@ -157,6 +174,8 @@ vim
 vlc
 vulkan-intel
 vulkan-radeon
+waybar-hyprland
+wbg
 wget
 which
 wine-staging
@@ -165,6 +184,7 @@ wireless_tools
 wmctrl
 xcalib
 xclip
+xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 xdg-utils
 xf86-video-amdgpu
@@ -176,6 +196,7 @@ xorg-server
 xorg-xev
 xorg-xinit
 xorg-xinput
+xorg-xwayland
 xorg-xwininfo
 xterm
 yay

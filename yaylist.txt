@@ -3,7 +3,11 @@ asusctl-git
 autotiling-git
 bashmount
 captive-browser-git
+clipman
 google-chrome
+grimshot
+hyprland-git
+hyprpaper-git
 lf-bin
 mongodb-bin
 mongodb-tools-bin
@@ -16,6 +20,9 @@ polybar-git
 python2
 python38
 slack-desktop
+waybar-hyprland
+wbg
+xdg-desktop-portal-hyprland-git
 yay
 yt-dlp-drop-in
 zsh-z-git
