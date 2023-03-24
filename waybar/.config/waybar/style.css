@@ -24,13 +24,13 @@
   border-radius: 0;
   font-family: 'Overpass Mono';
   font-weight: bold;
-  font-size: 12px;
+  font-size: 10px;
   min-height: 0;
   background: @background
 }
 
 window#waybar {
-  background: @background;
+  background: red;
   color: #d3dfeb;
 }
 
@@ -49,13 +49,13 @@ tooltip {
 }
 
 #workspaces button.active {
-  color: #38578e;
+  color: @foreground;
 }
 
 #workspaces button.focused {
   color: @color3;
   background: #975152;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 #workspaces button.urgent {
@@ -65,15 +65,11 @@ tooltip {
 }
 
 #workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
+  background: @background;
+  color: @foreground;
   border-radius: 10px;
 }
 
-#custom-language,
-#custom-updates,
-#custom-caffeine,
-#custom-weather,
 #window,
 #clock,
 #battery,
@@ -84,11 +80,10 @@ tooltip {
 #backlight,
 #cpu,
 #memory {
-  background: #1e1e2e;
-  padding: 0px 10px;
-  margin: 3px 0px;
-  margin-top: 10px;
-  border: 1px solid #181825;
+  background: @background;
+  padding: 1px;
+  margin: 1px;
+  /* border: 1px solid #181825; */
 }
 
 #workspaces {
@@ -100,17 +95,11 @@ tooltip {
   background: @background
 }
 
-#custom-caffeine {
-  color: #89dceb;
-  border-radius: 10px 0px 0px 10px;
-  border-right: 0px;
-  margin-left: 10px;
-}
 
 #window {
-  border-radius: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
+  /* border-radius: 10px; */
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 #clock {
