@@ -1,2 +1,3 @@
 #!/bin/sh
-wmctrl -r $1 -b add,demands_attention
+sleep 1 && printf '\a'
+#wmctrl -r $1 -b add,demands_attention
