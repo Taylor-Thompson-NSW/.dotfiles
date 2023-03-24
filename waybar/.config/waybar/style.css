@@ -55,7 +55,6 @@ tooltip {
 #workspaces button.focused {
   color: @foreground;
   background: #975152;
-  /* border-radius: 10px; */
 }
 
 #workspaces button.urgent {
@@ -86,7 +85,6 @@ tooltip {
   color: @color2;
   padding: 1px;
   margin: 1px;
-  /* border: 1px solid #181825; */
 }
 
 #workspaces {
@@ -95,7 +93,6 @@ tooltip {
 
 
 #window {
-  /* border-radius: 10px; */
   margin-left: 25px;
   margin-right: 25px;
 }
