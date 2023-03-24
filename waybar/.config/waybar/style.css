@@ -24,7 +24,7 @@
   border-radius: 0;
   font-family: 'Overpass Mono';
   font-weight: bold;
-  font-size: 10px;
+  font-size: 14px;
   min-height: 0;
   background: @background
 }
@@ -43,7 +43,7 @@ tooltip {
 }
 
 #workspaces button {
-  padding: 5px;
+  padding: 1px;
   color: #313244;
   margin-right: 5px;
 }
