@@ -192,6 +192,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### Set alias
 #############
+alias kittyxway="env -u WAYLAND_DISPLAY kitty"
 alias cls="clear"
 alias ..="cd .."
 alias cd..="cd .."
@@ -216,6 +217,16 @@ alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 alias grep='grep --color=auto'
 alias idea='eureka'
 alias startx='ssh-agent startx'
+
+#Feh alias to open with filename & fit to window
+alias feh="feh -d -."
+alias feht="feh -t -. -E 256 -y 256"
+#Auto make parent dirs
+alias mkdir='mkdir -pv'
+#Making changing directories to backlight files a little faster
+alias changebrightness='cd /sys/class/backlight/'
+
+alias fuzzypwd='cd $(find * -maxdepth 1 -type d \( -name node_modules -o -name .git \) -prune -o -print| fzf)'
 
 ### Bind keys
 #############
@@ -372,15 +383,3 @@ unset _MY_NODE
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#ALIASES
-#
-#Feh alias to open with filename & fit to window
-alias feh="feh -d -."
-alias feht="feh -t -. -E 256 -y 256"
-#Auto make parent dirs
-alias mkdir='mkdir -pv'
-#Making changing directories to backlight files a little faster
-alias changebrightness='cd /sys/class/backlight/'
-
-alias fuzzypwd='cd $(find * -maxdepth 1 -type d \( -name node_modules -o -name .git \) -prune -o -print| fzf)'
