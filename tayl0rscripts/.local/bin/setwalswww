@@ -1,4 +1,3 @@
 #!/bin/zsh
-
 swww kill
 swww init

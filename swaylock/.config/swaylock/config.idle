@@ -1,0 +1,10 @@
+grace=3
+daemonize
+screenshots
+fade-in=1
+ignore-empty-password
+effect-greyscale
+effect-blur=10x2
+indicator
+clock
+text-color=blue

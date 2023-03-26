@@ -1,9 +1,8 @@
 {
     "layer": "top",
     "position": "top",
-    "mod": "dock",
+    "mode": "dock",
     "exclusive": true,
-    "passtrough": false,
     "gtk-layer-shell": true,
     "height": 0,
     "modules-left": [
@@ -37,9 +36,11 @@
     },
 
     "wlr/workspaces": {
-        "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
+        "disable-scroll": false,
+        "enable-bar-scroll": true,
+        "disable-scroll-wraparound": true,
         "persistent_workspaces": {
             "1": [],
             "2": [],
@@ -90,7 +91,7 @@
 
     "clock": {
         "timezone": "America/New_York",
-        "format": "{: %d/%m  %I:%M %p}",
+        "format": "{: %A, %b %d  %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "pulseaudio": {
