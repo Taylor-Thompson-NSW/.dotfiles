@@ -4,6 +4,7 @@ autotiling-git
 bashmount
 captive-browser-git
 clipman
+discord_arch_electron
 google-chrome
 grimshot
 hyprland-git
@@ -20,8 +21,11 @@ polybar-git
 python2
 python38
 slack-desktop
+sway-audio-idle-inhibit-git
+swaylock-effects-git
 waybar-hyprland
 wbg
+webcord
 xdg-desktop-portal-hyprland-git
 yay
 yt-dlp-drop-in

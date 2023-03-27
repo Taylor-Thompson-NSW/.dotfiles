@@ -24,13 +24,14 @@ cpupower
 dconf-editor
 dhcpcd
 dialog
-discord
+discord_arch_electron
 dmenu
 docker
 docker-compose
 dunst
 easyeffects
 efibootmgr
+electron
 elementary-icon-theme
 expac
 fakeroot
@@ -118,6 +119,7 @@ nvidia
 nvidia-prime
 nvidia-settings
 nvim-packer-git
+obs-studio
 oh-my-zsh-git
 onefetch
 open-vm-tools
@@ -159,9 +161,11 @@ strace
 sudo
 supergfxctl
 sway
+sway-audio-idle-inhibit-git
 swaybg
+swayidle
 swayimg
-swaylock
+swaylock-effects-git
 sxiv
 texinfo
 thunderbird
@@ -176,6 +180,7 @@ vulkan-intel
 vulkan-radeon
 waybar-hyprland
 wbg
+webcord
 wget
 which
 wine-staging
@@ -184,6 +189,7 @@ wireless_tools
 wmctrl
 xcalib
 xclip
+xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 xdg-utils
