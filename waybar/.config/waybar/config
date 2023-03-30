@@ -28,7 +28,7 @@
     },
 
     "custom/pisces-and-etc" : {
-      "format": " ♓︎  ∞ "
+      "format": "♓︎ ∞"
     },
 
     "hyprland/window": {
@@ -62,7 +62,7 @@
 
      "cpu": {
          "interval": 10,
-         "format": " {}%",
+         "format": " {}% ",
          "max-length": 10,
      },
      "memory": {
@@ -73,16 +73,16 @@
     },
     "battery": {
         "states": {
-            // "good": 60,
-            "warning": 30,
-            "critical": 15
+            "good": 60,
+            "warning": 25,
+            "critical": 15,
         },
-        "format": "{capacity}% {icon}",
+        "format": "{icon} {capacity}% ",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         // "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        "format-full": "",
+        // "format-full": " {capacity}",
+        // "format-good": "{icon} {capacity}%", // An empty format will hide the module
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
@@ -91,11 +91,12 @@
 
     "clock": {
         "timezone": "America/New_York",
-        "format": "{: %A, %b %d  %I:%M %p}",
+        //"format": "{: %A, %b %d  %I:%M %p}",
+        "format": "{:%A, %b %d %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon} {volume}% ",
         "tooltip": false,
         "format-muted": " Muted",
         "on-click": "pamixer -t",

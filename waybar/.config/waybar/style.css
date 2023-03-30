@@ -87,6 +87,14 @@ tooltip {
   margin: 1px;
 }
 
+#battery.warning {
+  color: yellow;
+}
+
+#battery.critical {
+  color: red;
+}
+
 #workspaces {
   background: @background
 }
