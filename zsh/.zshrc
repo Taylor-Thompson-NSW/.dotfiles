@@ -229,6 +229,9 @@ alias mkdir='mkdir -pv'
 alias changebrightness='cd /sys/class/backlight/'
 
 alias fuzzypwd='cd $(find * -maxdepth 1 -type d \( -name node_modules -o -name .git \) -prune -o -print| fzf)'
+#clipman clear all (Wayland)
+alias clearclip='clipman clear -a'
+
 
 ### Bind keys
 #############
