@@ -1,10 +1,9 @@
-grace=3
 daemonize
-screenshots
 fade-in=1
+screenshots
 ignore-empty-password
-effect-greyscale
-effect-blur=10x2
+effect-blur=10x5
+effect-vignette=0.5:0.5
 indicator
 clock
 text-color=blue
