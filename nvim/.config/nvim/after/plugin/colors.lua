@@ -1,8 +1,8 @@
 --SELECT COLORSCHEME
--- vim.g.my_colorscheme = "gruvbox-material"
+vim.g.my_colorscheme = "gruvbox-material"
 -- vim.g.my_colorscheme = "tokyonight"
 -- vim.g.my_colorscheme = "catppuccin"
-vim.g.my_colorscheme = "rose-pine"
+-- vim.g.my_colorscheme = "rose-pine"
 --
 
 require("tokyonight").setup({
