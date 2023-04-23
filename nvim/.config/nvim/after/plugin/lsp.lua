@@ -123,11 +123,21 @@ lsp.configure("tsserver", {
 	},
 })
 
+lsp.configure("tailwindcss", {
+	performance = {
+		trigger_debounce_time = 500,
+		throttle = 550,
+		fetching_timeout = 80,
+	},
+})
+
 lsp.configure("astro", {
 	init_options = {
 		configuration = {},
 		typescript = {
-			serverPath = vim.fs.normalize("~/home/tayl0r/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib/tsserverlibrary.js"),
+			serverPath = vim.fs.normalize(
+				"~/home/tayl0r/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib/tsserverlibrary.js"
+			),
 		},
 	},
 })
