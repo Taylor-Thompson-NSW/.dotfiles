@@ -11,6 +11,7 @@ null_ls.setup({
 			extra_filetypes = { "astro" },
 		}),
 		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.rustfmt,
 		null_ls.builtins.diagnostics.eslint_d.with({
 			diagnostics_format = "[eslint] #{m}\n(#{c})",
 		}),
