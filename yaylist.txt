@@ -1,10 +1,9 @@
 ani-cli-git
-asusctl-git
 autotiling-git
 bashmount
 captive-browser-git
 clipman
-discord_arch_electron
+cpupower-gui
 google-chrome
 grimshot
 hyprland-git
@@ -25,7 +24,6 @@ sway-audio-idle-inhibit-git
 swaylock-effects-git
 waybar-hyprland
 wbg
-webcord
 xdg-desktop-portal-hyprland-git
 yay
 yt-dlp-drop-in
