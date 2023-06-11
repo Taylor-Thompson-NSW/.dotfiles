@@ -46,6 +46,7 @@ findutils
 firefox
 flameshot
 flex
+foot
 fzf
 gawk
 gcc
@@ -82,6 +83,7 @@ jsoncpp
 kitty
 lf-bin
 libreoffice-fresh
+libsixel
 libtool
 libva-intel-driver
 libva-mesa-driver
@@ -146,6 +148,7 @@ python2
 python38
 qt6-wayland
 ranger
+rawtherapee
 ripgrep
 rofi
 rog-control-center
@@ -172,6 +175,7 @@ tickrs
 tmux
 ttf-dejavu
 ttf-hack
+ueberzug
 unzip
 v4l2loopback-dkms
 vim
