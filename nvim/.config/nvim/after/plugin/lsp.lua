@@ -4,9 +4,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
 	"tsserver",
-	"rust_analyzer",
 	"tailwindcss",
-	"jedi_language_server",
 })
 
 local cmp = require("cmp")
@@ -70,7 +68,7 @@ lsp.on_attach(function(client, bufnr)
 	end, opts)
 end)
 
-lsp.configure("sumneko_lua", {
+lsp.configure("lua-language-server", {
 	settings = {
 		Lua = {
 			runtime = {
