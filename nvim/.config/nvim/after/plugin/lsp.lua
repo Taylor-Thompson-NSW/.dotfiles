@@ -68,7 +68,7 @@ lsp.on_attach(function(client, bufnr)
 	end, opts)
 end)
 
-lsp.configure("lua-language-server", {
+lsp.configure("lua_ls", {
 	settings = {
 		Lua = {
 			runtime = {

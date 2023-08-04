@@ -1,0 +1,1 @@
+sudo dpkg-query -f '${binary:Package}\n' -W > aptitude_packages_list.txt
