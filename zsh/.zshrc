@@ -425,8 +425,7 @@ zstyle '*' single-ignored show
 
 #Editor Variable
 export EDITOR="nvim"
-
-
+#
 
 #-----PATH ADDITIONS ------#
 #--------------------------#
